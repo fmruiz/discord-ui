@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
+import { ThemeProvider } from "styled-components";
+import { theme } from "./styles/globalTheme";
 
 export const App = () => {
   return (
-    <div>
+    <ThemeProvider theme={theme}>
       <h1>Hola mundo</h1>
-    </div>
-  )
-}
+    </ThemeProvider>
+  );
+};
