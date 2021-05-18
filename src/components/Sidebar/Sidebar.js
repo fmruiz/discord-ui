@@ -1,9 +1,10 @@
 import React from 'react'
+import { SidebarContainer } from './styles'
 
 export const Sidebar = () => {
     return (
-        <div>
-            
-        </div>
+        <SidebarContainer>
+            <h1>hola</h1>
+        </SidebarContainer>
     )
 }
