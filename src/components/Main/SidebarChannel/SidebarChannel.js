@@ -11,9 +11,18 @@ import {
   FooterUsernameContainer,
   FooterOptionsContainer,
   ChannelContainer,
+  ChannelTitle,
+  ChannelTitleContainer,
+  Title,
 } from "./styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown, faCog, faHeadphonesAlt, faMicrophone } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronDown,
+  faCog,
+  faHeadphonesAlt,
+  faMicrophone,
+  faPlus,
+} from "@fortawesome/free-solid-svg-icons";
 import LetraF from "../../../assets/letraf.jpg";
 
 export const SidebarChannel = () => {
@@ -24,7 +33,16 @@ export const SidebarChannel = () => {
         <FontAwesomeIcon icon={faChevronDown} className="fontawesome__icon" />
       </SidebarChannelHeader>
       <ChannelContainer>
-          
+        <ChannelTitleContainer>
+          <ChannelTitle>
+            <FontAwesomeIcon
+              icon={faChevronDown}
+              className="fontawesome__title"
+            />
+            <Title>TEXT CHANNELS ⚡</Title>
+          </ChannelTitle>
+          <FontAwesomeIcon icon={faPlus} className="fontawesome__add" />
+        </ChannelTitleContainer>
       </ChannelContainer>
       <SidebarChannelFooter>
         <FooterUserContainer>
@@ -35,9 +53,15 @@ export const SidebarChannel = () => {
           </FooterUsernameContainer>
         </FooterUserContainer>
         <FooterOptionsContainer>
-          <FontAwesomeIcon icon={faMicrophone} className='fontawesome__options' />
-          <FontAwesomeIcon icon={faHeadphonesAlt} className='fontawesome__options' />
-          <FontAwesomeIcon icon={faCog} className='fontawesome__options' />
+          <FontAwesomeIcon
+            icon={faMicrophone}
+            className="fontawesome__options"
+          />
+          <FontAwesomeIcon
+            icon={faHeadphonesAlt}
+            className="fontawesome__options"
+          />
+          <FontAwesomeIcon icon={faCog} className="fontawesome__options" />
         </FooterOptionsContainer>
       </SidebarChannelFooter>
     </SidebarChannelContainer>
