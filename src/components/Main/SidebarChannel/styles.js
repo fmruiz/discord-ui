@@ -34,10 +34,18 @@ export const NameChannel = styled.h3`
   font-weight: bold;
 `;
 
+export const ChannelContainer = styled.div`
+  height: 88%;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  flex-direction: column;
+`;
+
 export const SidebarChannelFooter = styled.div`
   display: flex;
   justify-content: space-between;
-  height: 5%;
+  height: 7%;
   padding-left: 15px;
   padding-right: 15px;
   background-color: ${(props) => props.theme.COLORS.footer};

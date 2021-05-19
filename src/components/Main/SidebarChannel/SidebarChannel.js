@@ -10,6 +10,7 @@ import {
   FooterUserCode,
   FooterUsernameContainer,
   FooterOptionsContainer,
+  ChannelContainer,
 } from "./styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faCog, faHeadphonesAlt, faMicrophone } from "@fortawesome/free-solid-svg-icons";
@@ -22,6 +23,9 @@ export const SidebarChannel = () => {
         <NameChannel>Frontend's Devs</NameChannel>
         <FontAwesomeIcon icon={faChevronDown} className="fontawesome__icon" />
       </SidebarChannelHeader>
+      <ChannelContainer>
+          
+      </ChannelContainer>
       <SidebarChannelFooter>
         <FooterUserContainer>
           <FooterUserImg src={LetraF} alt="user" />
