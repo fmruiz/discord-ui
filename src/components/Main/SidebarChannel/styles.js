@@ -9,10 +9,16 @@ export const SidebarChannelContainer = styled.div`
 
 export const SidebarChannelHeader = styled.div`
   display: flex;
+  justify-content: space-between;
   border-bottom: 1px solid #212121;
   height: 5%;
   padding-left: 15px;
   padding-right: 15px;
+
+  .fontawesome__icon {
+    color: ${(props) => props.theme.COLORS.white};
+    margin: auto 0;
+  }
 `;
 
 export const NameChannel = styled.h3`
