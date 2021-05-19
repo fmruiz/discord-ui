@@ -14,6 +14,12 @@ export const SidebarChannelHeader = styled.div`
   height: 5%;
   padding-left: 15px;
   padding-right: 15px;
+  transition: background-color 0.5s;
+
+  :hover {
+    background-color: ${(props) => props.theme.COLORS.mediumGray};
+    transition: background-color 0.5s;
+  }
 
   .fontawesome__icon {
     color: ${(props) => props.theme.COLORS.white};
