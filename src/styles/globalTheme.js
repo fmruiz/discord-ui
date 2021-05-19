@@ -7,5 +7,6 @@ export const theme = {
     lightGray: "#99aab5",
     blue: "#7289da",
     black: "#212121",
+    footer: "#292929",
   },
 };
