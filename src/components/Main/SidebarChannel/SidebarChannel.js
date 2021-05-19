@@ -14,6 +14,7 @@ import {
   faPlus,
 } from "@fortawesome/free-solid-svg-icons";
 import { SidebarFooter } from "./SidebarFooter/SidebarFooter";
+import { Channel } from "./Channel/Channel";
 
 export const SidebarChannel = () => {
   return (
@@ -22,18 +23,7 @@ export const SidebarChannel = () => {
         <NameChannel>Frontend's Devs</NameChannel>
         <FontAwesomeIcon icon={faChevronDown} className="fontawesome__icon" />
       </SidebarChannelHeader>
-      <ChannelContainer>
-        <ChannelTitleContainer>
-          <ChannelTitle>
-            <FontAwesomeIcon
-              icon={faChevronDown}
-              className="fontawesome__title"
-            />
-            <Title>TEXT CHANNELS ⚡</Title>
-          </ChannelTitle>
-          <FontAwesomeIcon icon={faPlus} className="fontawesome__add" />
-        </ChannelTitleContainer>
-      </ChannelContainer>
+      <Channel />
       <SidebarFooter />
     </SidebarChannelContainer>
   );
