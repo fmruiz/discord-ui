@@ -2,7 +2,7 @@ import styled from "styled-components/macro";
 
 export const MainContainer = styled.div`
   display: flex;
-  width: 96%;
+  width: 96.2%;
 `;
 
 export const DashboardContainer = styled.div`

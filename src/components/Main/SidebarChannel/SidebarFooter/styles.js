@@ -3,7 +3,7 @@ import styled from "styled-components/macro";
 export const SidebarChannelFooter = styled.div`
   display: flex;
   justify-content: space-between;
-  height: 7%;
+  height: 6%;
   padding-left: 15px;
   padding-right: 15px;
   background-color: ${(props) => props.theme.COLORS.footer};
@@ -30,6 +30,7 @@ export const FooterUsername = styled.p`
   font-size: 1.4vh;
   color: ${(props) => props.theme.COLORS.white};
   margin: 0;
+  font-weight: bold;
 `;
 
 export const FooterUserCode = styled.p`
