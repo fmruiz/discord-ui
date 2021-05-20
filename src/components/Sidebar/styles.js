@@ -1,7 +1,7 @@
 import styled from "styled-components/macro";
 
 export const SidebarContainer = styled.div`
-  width: 4vw;
+  width: 4%;
   height: 100vh;
   margin: 0;
   background-color: ${(props) => props.theme.COLORS.strongGray};
