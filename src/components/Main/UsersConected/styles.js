@@ -19,3 +19,4 @@ export const UsersConectedTitle = styled.p`
   font-weight: bold;
   margin-bottom: 8px;
 `;
+
