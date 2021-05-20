@@ -1,15 +1,11 @@
-import { faHashtag } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
-import { HeaderContainer, HeaderTitle, HeaderTitleContainer } from './styles'
+import React from "react";
+import { HeaderContainer } from "./styles";
+import { HeaderTitle } from "./HeaderTitle/HeaderTitle";
 
 export const Header = () => {
-    return (
-        <HeaderContainer>
-            <HeaderTitleContainer>
-                <FontAwesomeIcon icon={faHashtag} className="fontawesome__headerTitle"/>
-                <HeaderTitle>general-chat</HeaderTitle>
-            </HeaderTitleContainer>
-        </HeaderContainer>
-    )
-}
+  return (
+    <HeaderContainer>
+      <HeaderTitle />
+    </HeaderContainer>
+  );
+};
