@@ -5,6 +5,7 @@ export const UsersConectedContainer = styled.div`
   flex-direction: column;
   background-color: ${(props) => props.theme.COLORS.gray};
   width: 15%;
+  padding: 20px 15px 20px 15px;
 `;
 
 export const UsersContainer = styled.div`
@@ -12,4 +13,8 @@ export const UsersContainer = styled.div`
   flex-direction: column;
 `;
 
-export const UsersConectedTitle = styled.p``;
+export const UsersConectedTitle = styled.p`
+  color: ${(props) => props.theme.COLORS.lightGray};
+  font-size: 1.3vh;
+  font-weight: bold;
+`;
