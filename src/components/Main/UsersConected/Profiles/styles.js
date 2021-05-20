@@ -30,4 +30,5 @@ export const ProfilesName = styled.p`
   color: ${(props) => props.theme.COLORS.lightGray};
   font-size: 1.6vh;
   padding-left: 12px;
+  margin: 0;
 `;

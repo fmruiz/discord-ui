@@ -15,6 +15,7 @@ export const UsersContainer = styled.div`
 
 export const UsersConectedTitle = styled.p`
   color: ${(props) => props.theme.COLORS.lightGray};
-  font-size: 1.3vh;
+  font-size: 1.25vh;
   font-weight: bold;
+  margin-bottom: 8px;
 `;
