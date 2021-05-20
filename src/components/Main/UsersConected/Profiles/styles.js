@@ -3,6 +3,20 @@ import styled from "styled-components";
 export const ProfilesContainer = styled.div`
   display: flex;
   align-items: center;
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  transition: background-color 0.5s;
+
+  :hover {
+    background-color: ${(props) => props.theme.COLORS.mediumGray};
+    border-radius: 5px;
+    transition: background-color 0.5s;
+  }
+
+  .admin {
+    color: #FF3232;
+  }
 `;
 
 export const ProfilesImgContainer = styled.div`
@@ -30,5 +44,6 @@ export const ProfilesName = styled.p`
   color: ${(props) => props.theme.COLORS.lightGray};
   font-size: 1.6vh;
   padding-left: 12px;
+  padding-right: 6px;
   margin: 0;
 `;
