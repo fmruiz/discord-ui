@@ -5,4 +5,5 @@ export const SidebarChannelContainer = styled.div`
   flex-direction: column;
   background-color: ${(props) => props.theme.COLORS.gray};
   width: 15%;
+  border-top-left-radius: 10px;
 `;

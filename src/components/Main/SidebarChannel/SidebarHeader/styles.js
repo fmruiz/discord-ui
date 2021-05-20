@@ -7,6 +7,7 @@ export const SidebarChannelHeader = styled.div`
   height: 5%;
   padding-left: 15px;
   padding-right: 15px;
+  border-top-left-radius: 10px;
   transition: background-color 0.5s;
 
   :hover {
@@ -25,4 +26,5 @@ export const NameChannel = styled.h3`
   color: ${(props) => props.theme.COLORS.white};
   margin: auto 0;
   font-weight: bold;
+  border-top-left-radius: 10px;
 `;
