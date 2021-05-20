@@ -1,7 +1,7 @@
 import styled from "styled-components/macro";
 
 export const SidebarContainer = styled.div`
-  width: 4%;
+  width: 3.8%;
   height: 100vh;
   margin: 0;
   background-color: ${(props) => props.theme.COLORS.strongGray};
@@ -10,8 +10,8 @@ export const SidebarContainer = styled.div`
 `;
 
 export const SidebarImage = styled.img`
-    width: 55px;
-    height: 55px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     margin: 10px auto 0px auto;
 `;
