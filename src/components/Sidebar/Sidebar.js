@@ -1,5 +1,5 @@
 import React from "react";
-import { Divider, SidebarContainer, SidebarImage, SidebarImageSelected } from "./styles";
+import { Divider, SidebarContainer, SidebarImage } from "./styles";
 import logo from "../../assets/logo.jpg";
 import david from "../../assets/david.jpg";
 import tesla from "../../assets/tesla.png";
@@ -15,6 +15,7 @@ import epic from "../../assets/epic.jpeg";
 
 export const Sidebar = () => {
   const images = [
+    { logo: dev },
     { logo: david },
     { logo: tesla },
     { logo: microsoft },
@@ -29,9 +30,8 @@ export const Sidebar = () => {
 
   return (
     <SidebarContainer>
-      <SidebarImage src={logo} alt="Logo" />
+      <SidebarImage src={logo} alt="Logo" className="logo__discord"/>
       <Divider />
-      <SidebarImageSelected src={dev} alt="user"/>
       {images.map((img) => (
         <SidebarImage src={img.logo} alt="user" />
       ))}

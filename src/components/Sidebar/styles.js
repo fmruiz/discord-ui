@@ -7,6 +7,16 @@ export const SidebarContainer = styled.div`
   background-color: ${(props) => props.theme.COLORS.strongGray};
   display: flex;
   flex-direction: column;
+
+  .logo__discord {
+    filter: grayscale(1);
+    transition: all 0.5s;
+
+    :hover {
+      filter: grayscale(0);
+      transition: all 0.5s;
+    }
+  }
 `;
 
 export const SidebarImage = styled.img`
@@ -14,13 +24,12 @@ export const SidebarImage = styled.img`
     height: 48px;
     border-radius: 50%;
     margin: 10px auto 0px auto;
-`;
+    transition: all 0.5s;
 
-export const SidebarImageSelected = styled.img`
-    width: 48px;
-    height: 48px;
-    border-radius: 30%;
-    margin: 10px auto 0px auto;
+    :hover {
+      border-radius: 30%;
+      transition: border-radius 0.5s;
+    }
 `;
 
 export const Divider = styled.div`
