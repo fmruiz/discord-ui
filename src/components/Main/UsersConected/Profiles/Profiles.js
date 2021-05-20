@@ -1,11 +1,14 @@
 import React from "react";
-import { ProfilesContainer, ProfilesImg, ProfilesName } from "./styles";
+import { IconConected, ProfilesContainer, ProfilesImg, ProfilesImgContainer, ProfilesName } from "./styles";
 import Profile from "../../../../assets/letraf.jpg";
 
 export const Profiles = () => {
   return (
     <ProfilesContainer>
-      <ProfilesImg src={Profile} alt="profile-img" />
+        <ProfilesImgContainer>
+            <ProfilesImg src={Profile} alt="profile-img" />
+            <IconConected></IconConected>
+        </ProfilesImgContainer>
       <ProfilesName>FrancoDev</ProfilesName>
     </ProfilesContainer>
   );
