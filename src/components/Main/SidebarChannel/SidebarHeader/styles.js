@@ -3,7 +3,7 @@ import styled from "styled-components/macro";
 export const SidebarChannelHeader = styled.div`
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid ${(props) => props.theme.COLORS.black};
+  border-bottom: 1px solid ${(props) => props.theme.COLORS.strongGray};
   height: 5%;
   padding-left: 15px;
   padding-right: 15px;
