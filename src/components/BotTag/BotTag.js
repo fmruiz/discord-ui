@@ -5,7 +5,7 @@ import { BotTagContainer, BotTagText } from "./styles";
 
 export const BotTag = () => (
   <BotTagContainer>
-    <FontAwesomeIcon icon={faCheck} />
+    <FontAwesomeIcon icon={faCheck} className="fontawesome__bot"/>
     <BotTagText>BOT</BotTagText>
   </BotTagContainer>
 );

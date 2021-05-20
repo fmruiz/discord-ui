@@ -6,7 +6,7 @@ export const ProfilesContainer = styled.div`
   padding-left: 5px;
   padding-top: 5px;
   padding-bottom: 2px;
-  transition: background-color 0.5s;
+  transition: all 0.5s;
 
   :hover {
     background-color: ${(props) => props.theme.COLORS.mediumGray};
