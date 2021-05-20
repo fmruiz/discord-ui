@@ -15,6 +15,11 @@ export const ChannelTitleContainer = styled.div`
   .fontawesome__add {
     font-size: 1.4vh;
     color: ${(props) => props.theme.COLORS.lightGray};
+
+    :hover {
+      color: ${(props) => props.theme.COLORS.white};
+      transition: color 0.5s;
+    }
   }
 `;
 
@@ -26,6 +31,11 @@ export const ChannelTitle = styled.div`
     font-size: 1vh;
     color: ${(props) => props.theme.COLORS.lightGray};
     padding-right: 5px;
+
+    :hover {
+      color: ${(props) => props.theme.COLORS.white};
+      transition: color 0.5s;
+    }
   }
 `;
 

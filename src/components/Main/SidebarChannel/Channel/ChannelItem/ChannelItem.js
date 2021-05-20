@@ -1,4 +1,4 @@
-import { faHashtag } from "@fortawesome/free-solid-svg-icons";
+import { faCog, faHashtag, faUserPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import {
@@ -8,14 +8,17 @@ import {
   ChannelOptionsContainer,
 } from "./styles";
 
-export const ChannelItem = () => {
+export const ChannelItem = ({ channelName }) => {
   return (
     <ChannelItemContainer>
       <ChannelNameContainer>
-          <FontAwesomeIcon icon={faHashtag} className='fontawesome__channel' />
-        <ChannelName>general-chat</ChannelName>
+        <FontAwesomeIcon icon={faHashtag} className="fontawesome__channel" />
+        <ChannelName>{channelName}</ChannelName>
       </ChannelNameContainer>
-      <ChannelOptionsContainer></ChannelOptionsContainer>
+      <ChannelOptionsContainer>
+      <FontAwesomeIcon icon={faUserPlus} className="fontawesome__options"/>
+        <FontAwesomeIcon icon={faCog} className="fontawesome__options"/>
+      </ChannelOptionsContainer>
     </ChannelItemContainer>
   );
 };

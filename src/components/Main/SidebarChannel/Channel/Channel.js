@@ -10,6 +10,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ChannelItem } from "./ChannelItem/ChannelItem";
 
 export const Channel = () => {
+  const channels = [{ name: "general-chat" }];
+
   return (
     <ChannelContainer>
       <ChannelTitleContainer>
@@ -22,8 +24,9 @@ export const Channel = () => {
         </ChannelTitle>
         <FontAwesomeIcon icon={faPlus} className="fontawesome__add" />
       </ChannelTitleContainer>
-
-      <ChannelItem />
+      {channels.map((c, i) => (
+        <ChannelItem channelName={c.name} key={i} />
+      ))}
     </ChannelContainer>
   );
 };
