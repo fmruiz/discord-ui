@@ -1,4 +1,5 @@
 import React from 'react'
+import { ChannelChat } from './ChannelChat/ChannelChat'
 import { Header } from './Header/Header'
 import { SidebarChannel } from './SidebarChannel/SidebarChannel'
 import { ChatContainer, DashboardContainer, MainContainer } from './styles'
@@ -11,6 +12,7 @@ export const Main = () => {
             <DashboardContainer>
                 <Header />
                 <ChatContainer>
+                    <ChannelChat />
                     <UsersConected />
                 </ChatContainer>
             </DashboardContainer>
