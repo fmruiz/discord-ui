@@ -1,7 +1,8 @@
 import React from 'react'
 import { Header } from './Header/Header'
 import { SidebarChannel } from './SidebarChannel/SidebarChannel'
-import { DashboardContainer, MainContainer } from './styles'
+import { ChatContainer, DashboardContainer, MainContainer } from './styles'
+import { UsersConected } from './UsersConected/UsersConected'
 
 export const Main = () => {
     return (
@@ -9,6 +10,9 @@ export const Main = () => {
             <SidebarChannel />
             <DashboardContainer>
                 <Header />
+                <ChatContainer>
+                    <UsersConected />
+                </ChatContainer>
             </DashboardContainer>
         </MainContainer>
     )

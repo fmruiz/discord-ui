@@ -12,3 +12,8 @@ export const DashboardContainer = styled.div`
   height: 100%;
   background-color: ${props => props.theme.COLORS.mediumGray};
 `;
+
+export const ChatContainer = styled.div`
+  display: flex;
+  height: 95%;
+`;
