@@ -17,8 +17,8 @@ export const SidebarImage = styled.img`
 `;
 
 export const SidebarImageSelected = styled.img`
-    width: 55px;
-    height: 55px;
+    width: 48px;
+    height: 48px;
     border-radius: 30%;
     margin: 10px auto 0px auto;
 `;
