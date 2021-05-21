@@ -18,7 +18,7 @@ export const UserVoiceStatusContainer = styled.div`
 export const UserVoiceIsConnectedContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding-top: 8px;
+  padding-top: 15px;
 `;
 
 export const UserVoiceIsConnectedText = styled.p`
