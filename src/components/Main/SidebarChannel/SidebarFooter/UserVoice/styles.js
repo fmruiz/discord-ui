@@ -35,3 +35,26 @@ export const UserVoiceOptionsContainer = styled.div`
       padding-left: 7px;
   }
 `;
+
+export const ButtonUserVoiceContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+`;
+
+export const ButtonUserVoice = styled.div`
+    display: flex;
+    align-items: center;
+    background-color: ${props => props.theme.COLORS.mediumGray};
+    border-radius: 3px;
+    width: 5.5vw;
+    height: 3.5vh;
+    margin-top: 10px;
+
+    .fontawesome__button {
+        color: ${props => props.theme.COLORS.lightGray};
+    }
+`;
+
+export const ButtonUserVoiceText = styled.p`
+    color: ${props => props.theme.COLORS.lightGray};
+`;
