@@ -13,8 +13,10 @@ import {
   FooterUserCode,
   FooterUsernameContainer,
   FooterOptionsContainer,
+  UserContainer,
 } from "./styles";
 import LetraF from "../../../../assets/letraf.jpg";
+import { UserVoice } from "./UserVoice/UserVoice";
 
 export const SidebarFooter = () => {
   const [onMicro, setOnMicro] = useState(false);
@@ -25,26 +27,29 @@ export const SidebarFooter = () => {
 
   return (
     <SidebarChannelFooter>
-      <FooterUserContainer>
-        <FooterUserImg src={LetraF} alt="user" />
-        <FooterUsernameContainer>
-          <FooterUsername>FrancoDev</FooterUsername>
-          <FooterUserCode>#4641</FooterUserCode>
-        </FooterUsernameContainer>
-      </FooterUserContainer>
-      <FooterOptionsContainer>
-        <FontAwesomeIcon
-          onClick={isMicroMuted}
-          icon={faMicrophone}
-          className={`fontawesome__options ${onMicro ? "active" : null}`}
-        />
-        <FontAwesomeIcon
-          onClick={isHeadsetMuted}
-          icon={faHeadphonesAlt}
-          className={`fontawesome__options ${onHeadset ? "active" : null}`}
-        />
-        <FontAwesomeIcon icon={faCog} className="fontawesome__options" />
-      </FooterOptionsContainer>
+      <UserVoice />
+      <UserContainer>
+        <FooterUserContainer>
+          <FooterUserImg src={LetraF} alt="user" />
+          <FooterUsernameContainer>
+            <FooterUsername>FrancoDev</FooterUsername>
+            <FooterUserCode>#4641</FooterUserCode>
+          </FooterUsernameContainer>
+        </FooterUserContainer>
+        <FooterOptionsContainer>
+          <FontAwesomeIcon
+            onClick={isMicroMuted}
+            icon={faMicrophone}
+            className={`fontawesome__options ${onMicro ? "active" : null}`}
+          />
+          <FontAwesomeIcon
+            onClick={isHeadsetMuted}
+            icon={faHeadphonesAlt}
+            className={`fontawesome__options ${onHeadset ? "active" : null}`}
+          />
+          <FontAwesomeIcon icon={faCog} className="fontawesome__options" />
+        </FooterOptionsContainer>
+      </UserContainer>
     </SidebarChannelFooter>
   );
 };
