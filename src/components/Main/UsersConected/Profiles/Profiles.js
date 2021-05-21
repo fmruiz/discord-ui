@@ -8,12 +8,26 @@ import {
 } from "./styles";
 import Profile from "../../../../assets/letraf.jpg";
 import Bot from "../../../../assets/bot.png";
+import Elon from "../../../../assets/elon.jpg";
+import Bezos from "../../../../assets/bezos.jpg";
+import Galpe from "../../../../assets/galpe.jpg";
+import Mark from "../../../../assets/mark.jpg";
+import Gates from "../../../../assets/gates.jpg";
+import Jack from "../../../../assets/jack.jpg";
+import Larry from "../../../../assets/larry.jpg";
 import { BotTag } from "../../../BotTag/BotTag";
 
 export const Profiles = () => {
   const profilesData = [
     { name: "FrancoDev", logo: Profile, isConnected: true, isAdmin: true, isBot: false },
     { name: "Rythm", logo: Bot, isConnected: true, isAdmin: false, isBot: true },
+    { name: "ElonX", logo: Elon, isConnected: true, isAdmin: false, isBot: false },
+    { name: "Mr.Jeff", logo: Bezos, isConnected: true, isAdmin: false, isBot: false },
+    { name: "Galpe", logo: Galpe, isConnected: true, isAdmin: false, isBot: false },
+    { name: "markZ", logo: Mark, isConnected: true, isAdmin: false, isBot: false },
+    { name: "Gates", logo: Gates, isConnected: true, isAdmin: false, isBot: false },
+    { name: "jackTWT", logo: Jack, isConnected: true, isAdmin: false, isBot: false },
+    { name: "larry", logo: Larry, isConnected: true, isAdmin: false, isBot: false },
   ];
 
   return (

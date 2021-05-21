@@ -15,7 +15,7 @@ export const ProfilesContainer = styled.div`
   }
 
   .admin {
-    color: #FF3232;
+    color: ${(props) => props.theme.COLORS.green};
   }
 `;
 
@@ -24,8 +24,8 @@ export const ProfilesImgContainer = styled.div`
 `;
 
 export const ProfilesImg = styled.img`
-  height: 33px;
-  width: 33px;
+  height: 35px;
+  width: 35px;
   border-radius: 50%;
 `;
 
@@ -46,4 +46,10 @@ export const ProfilesName = styled.p`
   padding-left: 12px;
   padding-right: 6px;
   margin: 0;
+  transition: all 0.5s;
+
+  :hover {
+    color: ${(props) => props.theme.COLORS.white};
+    transition: all 0.5s;
+  }
 `;
