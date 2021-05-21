@@ -12,6 +12,16 @@ export const ChannelItemContainer = styled.div`
   :hover {
     background-color: ${(props) => props.theme.COLORS.mediumGray};
     transition: background-color 0.5s;
+
+    .channel-name {
+      color: ${(props) => props.theme.COLORS.white};
+      transition: color 0.5s;
+    }
+
+    .fontawesome__options {
+      display: block;
+      transition: all 0.5s;
+    }
   }
 `;
 
@@ -32,11 +42,6 @@ export const ChannelName = styled.p`
   color: ${(props) => props.theme.COLORS.lightGray};
   margin: 0;
   transition: color 0.5s;
-
-  :hover {
-    color: ${(props) => props.theme.COLORS.white};
-    transition: color 0.5s;
-  }
 `;
 
 export const ChannelOptionsContainer = styled.div`
@@ -47,5 +52,6 @@ export const ChannelOptionsContainer = styled.div`
   .fontawesome__options {
     font-size: 1.3vh;
     color: ${(props) => props.theme.COLORS.lightGray};
+    display: none;
   }
 `;

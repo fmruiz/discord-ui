@@ -13,7 +13,7 @@ export const ChannelItem = ({ channelName }) => {
     <ChannelItemContainer>
       <ChannelNameContainer>
         <FontAwesomeIcon icon={faHashtag} className="fontawesome__channel" />
-        <ChannelName>{channelName}</ChannelName>
+        <ChannelName className="channel-name">{channelName}</ChannelName>
       </ChannelNameContainer>
       <ChannelOptionsContainer>
       <FontAwesomeIcon icon={faUserPlus} className="fontawesome__options"/>
