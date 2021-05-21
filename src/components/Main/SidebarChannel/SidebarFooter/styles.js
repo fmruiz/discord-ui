@@ -51,6 +51,12 @@ export const FooterUserImg = styled.img`
   height: 3.4vh;
   width: 3.4vh;
   border-radius: 50%;
+  transition: all 0.5s;
+
+  :hover {
+    filter: grayscale(0.4);
+    transition: all 0.5s;
+  }
 `;
 
 export const FooterUsernameContainer = styled.div`
