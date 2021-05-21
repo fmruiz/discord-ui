@@ -4,7 +4,7 @@ export const SidebarContainer = styled.div`
   width: 3.8%;
   height: 100vh;
   margin: 0;
-  background-color: ${(props) => props.theme.COLORS.strongGray};
+  background-color: ${(props) => props.theme.COLORS.sidebar};
   display: flex;
   flex-direction: column;
 
