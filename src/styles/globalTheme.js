@@ -9,5 +9,6 @@ export const theme = {
     black: "#212121",
     footer: "#292b2f",
     green: "#25d366",
+    red: "#e53935",
   },
 };

@@ -47,5 +47,10 @@ export const FooterOptionsContainer = styled.div`
     color: ${(props) => props.theme.COLORS.lightGray};
     padding-left: 12px;
     font-size: 1vw;
+    transition: all 0.5s;
+  }
+
+  .active {
+    color: ${(props) => props.theme.COLORS.red};
   }
 `;
