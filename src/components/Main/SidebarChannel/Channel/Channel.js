@@ -1,29 +1,17 @@
 import React from "react";
-import {
-  ChannelContainer,
-  ChannelTitle,
-  ChannelTitleContainer,
-  Title,
-} from "./styles";
-import { faChevronDown, faPlus } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ChannelContainer } from "./styles";
 import { ChannelItem } from "./ChannelItem/ChannelItem";
+import { ChannelHeader } from "../../../ChannelHeader/ChannelHeader";
 
 export const Channel = () => {
-  const channels = [{ name: "general-chat" }];
+  const channelHeaders = [{ name: "THE OFFICE" }];
+  const channels = [{ name: "welcome" }, { name: "general-chat" }];
 
   return (
     <ChannelContainer>
-      <ChannelTitleContainer>
-        <ChannelTitle>
-          <FontAwesomeIcon
-            icon={faChevronDown}
-            className="fontawesome__title"
-          />
-          <Title>TEXT CHANNELS ⚡</Title>
-        </ChannelTitle>
-        <FontAwesomeIcon icon={faPlus} className="fontawesome__add" />
-      </ChannelTitleContainer>
+      {channelHeaders.map((c, i) => (
+        <ChannelHeader title={c.name} key={i} />
+      ))}
       {channels.map((c, i) => (
         <ChannelItem channelName={c.name} key={i} />
       ))}

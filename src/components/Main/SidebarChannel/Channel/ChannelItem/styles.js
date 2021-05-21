@@ -7,7 +7,6 @@ export const ChannelItemContainer = styled.div`
   padding: 6px;
   border-radius: 5px;
   margin-top: 5px;
-  margin-bottom: 5px;
   transition: background-color 0.5s;
 
   :hover {
