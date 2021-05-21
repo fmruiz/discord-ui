@@ -4,7 +4,7 @@ import { WelcomeChannelContainer, WelcomeChannelSubtitle, WelcomeChannelTitle } 
 export const WelcomeChannel = () => {
   return (
     <WelcomeChannelContainer>
-      <WelcomeChannelTitle>Welcome to <br/> Frontend's Devs</WelcomeChannelTitle>
+      <WelcomeChannelTitle>Welcome to <br/> The Boyz</WelcomeChannelTitle>
       <WelcomeChannelSubtitle>This is the beginning of this server.</WelcomeChannelSubtitle>
     </WelcomeChannelContainer>
   );

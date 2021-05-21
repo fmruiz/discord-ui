@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export const SidebarHeader = () => {
   return (
     <SidebarChannelHeader>
-      <NameChannel>Frontend's Devs</NameChannel>
+      <NameChannel>The Boyz</NameChannel>
       <FontAwesomeIcon icon={faChevronDown} className="fontawesome__icon" />
     </SidebarChannelHeader>
   );
