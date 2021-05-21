@@ -3,7 +3,7 @@ import styled from "styled-components/macro";
 export const SidebarChannelFooter = styled.div`
   display: flex;
   flex-direction: column;
-  height: 18%;
+  height: 16%;
   background-color: ${(props) => props.theme.COLORS.footer};
 `;
 
@@ -48,8 +48,8 @@ export const FooterUserContainer = styled.div`
 `;
 
 export const FooterUserImg = styled.img`
-  height: 30px;
-  width: 30px;
+  height: 3.4vh;
+  width: 3.4vh;
   border-radius: 50%;
 `;
 

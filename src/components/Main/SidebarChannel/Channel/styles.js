@@ -1,7 +1,7 @@
 import styled from "styled-components/macro";
 
 export const ChannelContainer = styled.div`
-  height: 76%;
+  height: 78%;
   margin: 20px 15px 20px 15px;
   display: flex;
   flex-direction: column;
