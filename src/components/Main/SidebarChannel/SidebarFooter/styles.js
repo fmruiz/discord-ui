@@ -4,8 +4,6 @@ export const SidebarChannelFooter = styled.div`
   display: flex;
   flex-direction: column;
   height: 18%;
-  padding-left: 15px;
-  padding-right: 15px;
   background-color: ${(props) => props.theme.COLORS.footer};
 `;
 
@@ -39,8 +37,8 @@ export const UserContainer = styled.div`
   display: flex;
   justify-content: space-between;
   height: 33.3%;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
   background-color: ${(props) => props.theme.COLORS.footer};
 `;
 
@@ -83,6 +81,10 @@ export const FooterOptionsContainer = styled.div`
     padding-left: 12px;
     font-size: 1vw;
     transition: all 0.5s;
+
+    :hover {
+      color: ${(props) => props.theme.COLORS.white};
+    }
   }
 
   .active {
