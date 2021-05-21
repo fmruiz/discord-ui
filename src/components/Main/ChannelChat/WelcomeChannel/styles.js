@@ -14,7 +14,7 @@ export const WelcomeChannelTitle = styled.h3`
   font-size: 3.7vh;
   margin: 0;
   text-align: center;
-  line-height: 40px;
+  line-height: 45px;
 `;
 
 export const WelcomeChannelSubtitle = styled.h3`
