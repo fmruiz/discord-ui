@@ -1,12 +1,19 @@
 import React from "react";
-import { HeaderContainer } from "./styles";
-import { HeaderTitle } from "./HeaderTitle/HeaderTitle";
+import { HeaderContainer, HeaderTitleContainer, HeaderTitleText } from "./styles";
 import { HeaderOptions } from "./HeaderOptions/HeaderOptions";
+import { faHashtag } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export const Header = () => {
+export const Header = ({ title }) => {
   return (
     <HeaderContainer>
-      <HeaderTitle />
+      <HeaderTitleContainer>
+        <FontAwesomeIcon
+          icon={faHashtag}
+          className="fontawesome__headerTitle"
+        />
+        <HeaderTitleText>{title}</HeaderTitleText>
+      </HeaderTitleContainer>
       <HeaderOptions />
     </HeaderContainer>
   );
