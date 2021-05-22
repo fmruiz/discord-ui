@@ -1,11 +1,16 @@
-import React from 'react'
-import { ChannelChatContainer } from './styles'
-import { WelcomeChannel } from './WelcomeChannel/WelcomeChannel'
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import { ChannelChatContainer } from "./styles";
+import { WelcomeChannel } from "./WelcomeChannel/WelcomeChannel";
 
 export const ChannelChat = () => {
-    return (
-        <ChannelChatContainer>
-            <WelcomeChannel />
-        </ChannelChatContainer>
-    )
-}
+  return (
+    <ChannelChatContainer>
+      <Switch>
+        <Route path="/welcome">
+          <WelcomeChannel />
+        </Route>
+      </Switch>
+    </ChannelChatContainer>
+  );
+};
