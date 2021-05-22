@@ -6,4 +6,8 @@ export const SidebarChannelContainer = styled.div`
   background-color: ${(props) => props.theme.COLORS.gray};
   width: 15%;
   border-top-left-radius: 10px;
+
+  a {
+    text-decoration: none;
+  }
 `;
