@@ -9,7 +9,7 @@ export const Channel = () => {
   const channels = [
     { name: "welcome" },
     { name: "general-chat" },
-    { name: "music" },
+    { name: "music-requests" },
   ];
 
   return (

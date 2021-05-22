@@ -20,8 +20,8 @@ export const Main = () => {
             <Header title="general-chat" />
             <ChatMain />
           </Route>
-          <Route path="/music">
-            <Header title="music" />
+          <Route path="/music-requests">
+            <Header title="music-requests" />
             <ChatMain />
           </Route>
         </Switch>
