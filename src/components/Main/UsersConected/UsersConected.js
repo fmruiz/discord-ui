@@ -10,7 +10,7 @@ export const UsersConected = () => {
   return (
     <UsersConectedContainer>
       <UsersContainer>
-        <UsersConectedTitle>ONLINE - 0</UsersConectedTitle>
+        <UsersConectedTitle>ONLINE - 9</UsersConectedTitle>
         <Profiles />
       </UsersContainer>
       <UsersContainer>

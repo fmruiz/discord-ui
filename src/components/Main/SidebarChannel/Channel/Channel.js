@@ -10,6 +10,7 @@ export const Channel = () => {
     { name: "welcome" },
     { name: "general-chat" },
     { name: "music-requests" },
+    { name: "memes" },
   ];
 
   return (

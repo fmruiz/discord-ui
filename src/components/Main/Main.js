@@ -24,6 +24,10 @@ export const Main = () => {
             <Header title="music-requests" />
             <ChatMain />
           </Route>
+          <Route path="/memes">
+            <Header title="memes" />
+            <ChatMain />
+          </Route>
         </Switch>
       </DashboardContainer>
     </MainContainer>
