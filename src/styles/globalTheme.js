@@ -9,6 +9,7 @@ export const theme = {
     musicGray: "#32353b",
     scrollGray: "#2e3338",
     thumbGray: "#202225",
+    formGray: "#40444b",
     blue: "#7289da",
     black: "#212121",
     footer: "#292b2f",

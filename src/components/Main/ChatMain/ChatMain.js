@@ -1,5 +1,6 @@
 import React from "react";
 import { MusicPublication } from "../MusicPublication/MusicPublication";
+import { SimpleWelcome } from "../SimpleWelcome/SimpleWelcome";
 import { UsersConected } from "../UsersConected/UsersConected";
 import { WelcomeChannel } from "../WelcomeChannel/WelcomeChannel";
 import { ChannelChatContainer, ChatContainer } from "./styles";
@@ -7,9 +8,14 @@ import { ChannelChatContainer, ChatContainer } from "./styles";
 export const ChatMain = ({ isWelcome, isMusic }) => {
   return (
     <ChatContainer>
-      <ChannelChatContainer className='scroll__div'>
+      <ChannelChatContainer className="scroll__div">
         {isWelcome && <WelcomeChannel />}
-        {isMusic && <MusicPublication />}
+        {isMusic && (
+          <>
+            <SimpleWelcome title="#music-requests!" subtitle="#music-requests" /> 
+            <MusicPublication />
+          </>
+        )}
       </ChannelChatContainer>
       <UsersConected />
     </ChatContainer>
