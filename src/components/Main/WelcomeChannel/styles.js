@@ -6,6 +6,7 @@ export const WelcomeChannelContainer = styled.div`
   padding-top: 100px;
   margin-right: 30px;
   margin-left: 30px;
+  margin-bottom: 7px;
   border-bottom: 1px solid #4F4E4E;
 `;
 
