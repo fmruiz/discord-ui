@@ -7,7 +7,7 @@ import { ChannelChatContainer, ChatContainer } from "./styles";
 export const ChatMain = ({ isWelcome, isMusic }) => {
   return (
     <ChatContainer>
-      <ChannelChatContainer>
+      <ChannelChatContainer className='scroll__div'>
         {isWelcome && <WelcomeChannel />}
         {isMusic && <MusicPublication />}
       </ChannelChatContainer>

@@ -4,6 +4,7 @@ export const MusicPublicationContainer = styled.div`
   display: flex;
   padding-left: 15px;
   padding-bottom: 10px;
+  margin-right: 4px;
   margin-top: 7px;
   margin-bottom: 7px;
 

@@ -2,8 +2,8 @@ import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import { Header } from "./Header/Header";
 import { SidebarChannel } from "./SidebarChannel/SidebarChannel";
-import { DashboardContainer, MainContainer } from "./styles";
 import { ChatMain } from "./ChatMain/ChatMain";
+import { DashboardContainer, MainContainer } from "./styles";
 
 export const Main = () => {
   return (
