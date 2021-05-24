@@ -10,7 +10,7 @@ export const MusicPublicationContainer = styled.div`
   margin-bottom: 7px;
 
   :hover {
-      background-color: ${props => props.theme.COLORS.musicGray};
+    background-color: ${(props) => props.theme.COLORS.musicGray};
   }
 `;
 
@@ -19,8 +19,8 @@ export const UserPublication = styled.div`
 `;
 
 export const MusicUserImg = styled.img`
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
 `;
 
@@ -32,36 +32,61 @@ export const UserInformationContainer = styled.div`
 
 export const UserNameText = styled.p`
   margin-top: 0;
-  color: ${props => props.theme.COLORS.white};
-  
+  margin-bottom: 3px;
+  color: ${(props) => props.theme.COLORS.white};
+
   :hover {
-      text-decoration: underline;
+    text-decoration: underline;
   }
 `;
 
 export const VideoLink = styled.a`
-    color: #2196f3;
+  color: #2196f3;
 
-    :hover {
-        text-decoration: underline;
-    }
+  :hover {
+    text-decoration: underline;
+  }
 `;
 
 export const VideoContainer = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: ${props => props.theme.COLORS.gray};
+  background-color: ${(props) => props.theme.COLORS.gray};
   margin-top: 4px;
   border-radius: 4px;
   width: 590px;
-  height: 370px;
+  height: 415px;
   border-left: 4px solid red;
   padding-left: 10px;
 `;
 
-export const PlatformTitle = styled.p`
+export const PlatformTitle = styled.a`
   margin: 0;
   padding: 7px 0 7px 0;
   font-size: 1.3vh;
-  color: ${props => props.theme.COLORS.lightGray};
+  color: ${(props) => props.theme.COLORS.lightGray};
+`;
+
+export const SongArtist = styled.a`
+  margin: 0;
+  padding: 0 0 7px 0;
+  font-weight: bold;
+  font-size: 1.4vh;
+  color: ${(props) => props.theme.COLORS.white};
+
+  :hover {
+    text-decoration: underline;
+  }
+`;
+
+export const SongName = styled.a`
+  margin: 0;
+  padding: 0 0 7px 0;
+  font-weight: bold;
+  font-size: 1.8vh;
+  color: #2196f3;
+
+  :hover {
+    text-decoration: underline;
+  }
 `;
