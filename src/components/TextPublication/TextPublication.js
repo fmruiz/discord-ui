@@ -3,11 +3,13 @@ import {
   TextPublicationContainer,
   UserImg,
   UserImgContainer,
+  UserImgContent,
   UserName,
   UserNameText,
   UserPublicationContainer,
 } from "./styles";
 import User from "../../assets/letraf.jpg";
+import Admin from "../../assets/admin.jpg";
 
 export const TextPublication = () => {
   const TextContent = [
@@ -29,6 +31,9 @@ export const TextPublication = () => {
     {
       textContent: "## Thank you for reading!",
     },
+    {
+        imgContent: Admin,
+    },
   ];
 
   return (
@@ -41,6 +46,7 @@ export const TextPublication = () => {
           <UserPublicationContainer>
             <UserName className={t.isAdmin && "admin"}>{t.user}</UserName>
             <UserNameText>{t.textContent}</UserNameText>
+            {t.imgContent && <UserImgContent src={t.imgContent}/>}
           </UserPublicationContainer>
         </TextPublicationContainer>
       ))}

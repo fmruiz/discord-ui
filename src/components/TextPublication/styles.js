@@ -46,3 +46,8 @@ export const UserNameText = styled.p`
   color: ${(props) => props.theme.COLORS.white};
   width: 60vw;
 `;
+
+export const UserImgContent = styled.img`
+    width: 800px;
+    height: 400px;
+`;
