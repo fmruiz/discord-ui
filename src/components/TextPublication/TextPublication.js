@@ -18,7 +18,7 @@ export const TextPublication = () => {
       isAdmin: true,
       logo: User,
       textContent:
-        "## Hello my name is Franco Ruiz, I am from Argentina and I am a Frontend Developer passionate about new technologies, technological challenges and learning different ways to approach a problem.",
+        "## Hello my name is Franco Ruiz, I am from Argentina and I am a Frontend Developer passionate about new technologies, technological challenges and learning different ways of dealing with a problem.",
     },
     {
       textContent:
