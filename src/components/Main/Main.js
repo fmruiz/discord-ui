@@ -22,7 +22,7 @@ export const Main = () => {
           </Route>
           <Route path="/music-requests">
             <Header title="music-requests" />
-            <ChatMain />
+            <ChatMain isMusic />
           </Route>
           <Route path="/memes">
             <Header title="memes" />

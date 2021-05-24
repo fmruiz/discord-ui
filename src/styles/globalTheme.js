@@ -6,6 +6,7 @@ export const theme = {
     gray: "#2f3136",
     mediumGray: "#36393f",
     lightGray: "#b9bbbe",
+    musicGray: "#32353b",
     blue: "#7289da",
     black: "#212121",
     footer: "#292b2f",
