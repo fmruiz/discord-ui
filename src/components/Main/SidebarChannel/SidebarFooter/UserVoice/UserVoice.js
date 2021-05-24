@@ -27,9 +27,7 @@ export const UserVoice = () => {
           <UserVoiceIsConnectedText>
             <FontAwesomeIcon icon={faSignal} /> Voice Connected
           </UserVoiceIsConnectedText>
-          <UserVoiceIsConnectedChannel>
-            Frontend's Devs
-          </UserVoiceIsConnectedChannel>
+          <UserVoiceIsConnectedChannel>The Boyz</UserVoiceIsConnectedChannel>
         </UserVoiceIsConnectedContainer>
         <UserVoiceOptionsContainer>
           <FontAwesomeIcon icon={faWater} className="fontawesome__userVoice" />
@@ -41,11 +39,11 @@ export const UserVoice = () => {
       </UserVoiceStatusContainer>
       <ButtonUserVoiceContainer>
         <ButtonUserVoice>
-          <FontAwesomeIcon icon={faVideo} className="fontawesome__button"/>
+          <FontAwesomeIcon icon={faVideo} className="fontawesome__button" />
           <ButtonUserVoiceText>Video</ButtonUserVoiceText>
         </ButtonUserVoice>
         <ButtonUserVoice>
-          <FontAwesomeIcon icon={faDesktop} className="fontawesome__button"/>
+          <FontAwesomeIcon icon={faDesktop} className="fontawesome__button" />
           <ButtonUserVoiceText>Screen</ButtonUserVoiceText>
         </ButtonUserVoice>
       </ButtonUserVoiceContainer>
