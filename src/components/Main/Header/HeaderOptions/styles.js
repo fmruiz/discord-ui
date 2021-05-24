@@ -4,7 +4,7 @@ export const HeaderOptionsContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 20%;
+  width: 25%;
   margin-right: 15px;
 
   .fontawesome__HeaderOptions {
@@ -16,5 +16,18 @@ export const HeaderOptionsContainer = styled.div`
       color: ${(props) => props.theme.COLORS.white};
       transition: color 0.5s;
     }
+  }
+`;
+
+export const InputSearch = styled.input`
+  width: 8vw;
+  background-color: ${(props) => props.theme.COLORS.strongGray};
+  border: none;
+  border-radius: 3px;
+  padding: 5px;
+  color: white;
+
+  :focus {
+    outline: none;
   }
 `;
