@@ -6,12 +6,14 @@ export const ProfilesContainer = styled.div`
   padding-left: 5px;
   padding-top: 5px;
   padding-bottom: 2px;
-  transition: all 0.5s;
 
   :hover {
     background-color: ${(props) => props.theme.COLORS.mediumGray};
     border-radius: 5px;
-    transition: background-color 0.5s;
+
+    p {
+      color: white;
+    }
   }
 
   .admin {
@@ -46,10 +48,4 @@ export const ProfilesName = styled.p`
   padding-left: 12px;
   padding-right: 6px;
   margin: 0;
-  transition: all 0.5s;
-
-  :hover {
-    color: ${(props) => props.theme.COLORS.white};
-    transition: all 0.5s;
-  }
 `;
