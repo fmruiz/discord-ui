@@ -12,6 +12,7 @@ export const SidebarChannelHeader = styled.div`
 
   :hover {
     background-color: ${(props) => props.theme.COLORS.mediumGray};
+    cursor: pointer;
     transition: background-color 0.5s;
   }
 

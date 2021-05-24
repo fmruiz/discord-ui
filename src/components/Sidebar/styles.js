@@ -29,6 +29,7 @@ export const SidebarImage = styled.img`
     :hover {
       border-radius: 30%;
       transition: border-radius 0.5s;
+      cursor: pointer;
     }
 `;
 

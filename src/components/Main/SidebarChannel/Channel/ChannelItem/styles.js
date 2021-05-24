@@ -7,20 +7,16 @@ export const ChannelItemContainer = styled.div`
   padding: 6px;
   border-radius: 5px;
   margin-top: 5px;
-  transition: background-color 0.5s;
 
   :hover {
     background-color: ${(props) => props.theme.COLORS.mediumGray};
-    transition: background-color 0.5s;
 
     .channel-name {
       color: ${(props) => props.theme.COLORS.white};
-      transition: color 0.5s;
     }
 
     .fontawesome__options {
       display: block;
-      transition: all 0.5s;
     }
   }
 `;
@@ -41,7 +37,6 @@ export const ChannelName = styled.p`
   font-size: 1.6vh;
   color: ${(props) => props.theme.COLORS.lightGray};
   margin: 0;
-  transition: color 0.5s;
 `;
 
 export const ChannelOptionsContainer = styled.div`

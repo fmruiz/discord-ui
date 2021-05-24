@@ -8,7 +8,7 @@ export const ChannelHeader = ({ title }) => {
     <ChannelTitleContainer>
       <ChannelTitle>
         <FontAwesomeIcon icon={faChevronDown} className="fontawesome__title" />
-        <Title>{title}</Title>
+        <Title className="channel__title">{title}</Title>
       </ChannelTitle>
       <FontAwesomeIcon icon={faPlus} className="fontawesome__add" />
     </ChannelTitleContainer>

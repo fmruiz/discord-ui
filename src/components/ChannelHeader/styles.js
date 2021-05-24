@@ -4,6 +4,7 @@ export const ChannelTitleContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 
   .fontawesome__add {
     font-size: 1.4vh;

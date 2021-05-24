@@ -10,11 +10,9 @@ export const HeaderOptionsContainer = styled.div`
   .fontawesome__HeaderOptions {
     color: ${(props) => props.theme.COLORS.lightGray};
     font-size: 2.3vh;
-    transition: color 0.5s;
 
     :hover {
       color: ${(props) => props.theme.COLORS.white};
-      transition: color 0.5s;
     }
   }
 `;

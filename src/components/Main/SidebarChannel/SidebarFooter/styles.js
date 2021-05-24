@@ -56,6 +56,7 @@ export const FooterUserImg = styled.img`
   :hover {
     filter: grayscale(0.4);
     transition: all 0.5s;
+    cursor: pointer;
   }
 `;
 
@@ -70,12 +71,20 @@ export const FooterUsername = styled.p`
   color: ${(props) => props.theme.COLORS.white};
   margin: 0;
   font-weight: bold;
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 export const FooterUserCode = styled.p`
   font-size: 1.2vh;
   color: ${(props) => props.theme.COLORS.lightGray};
   margin: 0;
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 export const FooterOptionsContainer = styled.div`
@@ -86,10 +95,10 @@ export const FooterOptionsContainer = styled.div`
     color: ${(props) => props.theme.COLORS.lightGray};
     padding-left: 12px;
     font-size: 1vw;
-    transition: all 0.5s;
 
     :hover {
       color: ${(props) => props.theme.COLORS.white};
+      cursor: pointer;
     }
   }
 
