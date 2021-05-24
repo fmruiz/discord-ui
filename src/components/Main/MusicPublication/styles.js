@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const MusicPublicationContainer = styled.div`
   display: flex;
+  padding-top: 5px;
   padding-left: 15px;
   padding-bottom: 10px;
   margin-right: 4px;
@@ -30,8 +31,7 @@ export const UserInformationContainer = styled.div`
 `;
 
 export const UserNameText = styled.p`
-    margin-top: 0;
-  margin-bottom: 5px;
+  margin-top: 0;
   color: ${props => props.theme.COLORS.white};
   
   :hover {
