@@ -1,26 +1,34 @@
 import React from "react";
 import { ChannelContainer } from "./styles";
 import { ChannelItem } from "./ChannelItem/ChannelItem";
-import { ChannelHeader } from "../../../ChannelHeader/ChannelHeader";
+import { ChannelHeader } from "./ChannelHeader/ChannelHeader";
 import { Link } from "react-router-dom";
 
 export const Channel = () => {
-  const channelHeaders = [{ name: "THE OFFICE" }];
-  const channels = [
+  const textChannels = [
     { name: "welcome" },
     { name: "general-chat" },
     { name: "music-requests" },
     { name: "memes" },
   ];
 
+  const voiceChannels = [
+    { name: "team-work", isVoice: true },
+    { name: "leadership", isVoice: true },
+  ];
+
   return (
     <ChannelContainer>
-      {channelHeaders.map((c, i) => (
-        <ChannelHeader title={c.name} key={i} />
-      ))}
-      {channels.map((c, i) => (
+      <ChannelHeader title="THE OFFICE" />
+      {textChannels.map((c, i) => (
         <Link to={"/" + c.name}>
           <ChannelItem channelName={c.name} key={i} />
+        </Link>
+      ))}
+      <ChannelHeader title="VOICE-CHANNELS" />
+      {voiceChannels.map((c, i) => (
+        <Link to={"/" + c.name}>
+          <ChannelItem channelName={c.name} isVoice key={i} />
         </Link>
       ))}
     </ChannelContainer>

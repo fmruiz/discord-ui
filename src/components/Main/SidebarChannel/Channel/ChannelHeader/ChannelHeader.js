@@ -3,7 +3,7 @@ import { ChannelTitle, Title, ChannelTitleContainer } from "./styles";
 import { faChevronDown, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export const ChannelHeader = ({ title }) => {
+export const ChannelHeader = ({ title, isVoice }) => {
   return (
     <ChannelTitleContainer>
       <ChannelTitle>
