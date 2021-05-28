@@ -29,7 +29,7 @@ export const Main = () => {
             <Header title="memes" />
             <ChatMain />
           </Route>
-          <Route path="/prueba">
+          <Route path="/elon">
             <StreamingScreen />
           </Route>
         </Switch>

@@ -5,7 +5,6 @@ import {
   UsersConectedImg,
   UsersConectedImgContainer,
   UsersConectedName,
-  UsersConectedNameContainer,
   VideoStreaming,
 } from "./styles";
 import Elon from "../../../assets/elon.jpg";
