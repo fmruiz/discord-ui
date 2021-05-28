@@ -3,6 +3,7 @@ import { ChannelContainer } from "./styles";
 import { ChannelItem } from "./ChannelItem/ChannelItem";
 import { ChannelHeader } from "./ChannelHeader/ChannelHeader";
 import { Link } from "react-router-dom";
+import { UserVoiceConnected } from "./UserVoiceConnected/UserVoiceConnected";
 
 export const Channel = () => {
   const textChannels = [
@@ -14,7 +15,6 @@ export const Channel = () => {
 
   const voiceChannels = [
     { name: "team-work", isVoice: true },
-    { name: "leadership", isVoice: true },
   ];
 
   return (
@@ -31,6 +31,7 @@ export const Channel = () => {
           <ChannelItem channelName={c.name} isVoice key={i} />
         </Link>
       ))}
+      <UserVoiceConnected />
     </ChannelContainer>
   );
 };
