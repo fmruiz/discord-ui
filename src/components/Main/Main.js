@@ -4,6 +4,7 @@ import { Header } from "./Header/Header";
 import { SidebarChannel } from "./SidebarChannel/SidebarChannel";
 import { ChatMain } from "./ChatMain/ChatMain";
 import { DashboardContainer, MainContainer } from "./styles";
+import { StreamingScreen } from "./StreamingScreen/StreamingScreen";
 
 export const Main = () => {
   return (
@@ -27,6 +28,9 @@ export const Main = () => {
           <Route path="/memes">
             <Header title="memes" />
             <ChatMain />
+          </Route>
+          <Route path="/prueba">
+            <StreamingScreen />
           </Route>
         </Switch>
       </DashboardContainer>

@@ -15,6 +15,9 @@ export const theme = {
     footer: "#292b2f",
     green: "#25d366",
     red: "#d32f2f",
+    darkLive: "#37474f",
+    brownLive: "#432910",
+    blueLive: "#0277bd",
   },
 };
 

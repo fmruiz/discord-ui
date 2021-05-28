@@ -11,6 +11,7 @@ export const Channel = () => {
     { name: "general-chat" },
     { name: "music-requests" },
     { name: "memes" },
+    { name: "prueba" },
   ];
 
   const voiceChannels = [
