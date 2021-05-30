@@ -16,7 +16,7 @@ import {
   UserContainer,
 } from "./styles";
 import LetraF from "../../../../assets/letraf.jpg";
-import { UserVoice } from "./UserVoice/UserVoice";
+// import { UserVoice } from "./UserVoice/UserVoice";
 
 export const SidebarFooter = () => {
   const [onMicro, setOnMicro] = useState(false);
@@ -27,7 +27,7 @@ export const SidebarFooter = () => {
 
   return (
     <SidebarChannelFooter>
-      <UserVoice />
+      {/* <UserVoice /> */}
       <UserContainer>
         <FooterUserContainer>
           <FooterUserImg src={LetraF} alt="user" />
