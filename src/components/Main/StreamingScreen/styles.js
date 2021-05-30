@@ -10,12 +10,14 @@ export const StreamingContainer = styled.div`
 
   .fontawesome__channel {
     color: ${props => props.theme.COLORS.lightGray};
+    font-size: 18px;
   }
 `;
 
 export const StreamingHeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 5%;
 `;
 
@@ -134,4 +136,58 @@ export const UsersConectedName = styled.p`
   border-radius: 8px;
   top: 105px;
   left: 10px;
+`;
+
+export const StreamingFooterContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  height: 12%;
+`;
+
+export const StreamingControlsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  width: 4%;
+  justify-content: space-between;
+`;
+
+export const UserImg = styled.img`
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+`;
+
+export const ButtonsContainer = styled.div`
+  display: flex;
+  width: 20%;
+  justify-content: space-between;
+
+  .isRed {
+    background-color: ${props => props.theme.COLORS.red};
+  }
+`;
+
+export const Button = styled.div`
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: ${props => props.theme.COLORS.gray};
+  position: relative;
+
+  .fontawesome__button {
+    color: ${props => props.theme.COLORS.white};
+    font-size: 25px;
+    position: absolute;
+    left: 22px;
+    top: 22px;
+  }
+`;
+
+export const OtherOptionsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 6%;
+  padding-right: 15px;
 `;

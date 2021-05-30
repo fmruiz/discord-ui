@@ -1,15 +1,13 @@
 import React from "react";
 import {
-  ChannelName,
-  HeaderOptionsContainer,
-  LiveLabel,
-  QualityLabel,
-  QualityVideoContainer,
-  StreamerName,
+  Button,
+  ButtonsContainer,
+  OtherOptionsContainer,
   StreamingContainer,
-  StreamingHeaderContainer,
+  StreamingControlsContainer,
+  StreamingFooterContainer,
   StreamingScreenContainer,
-  StreamingUsernameContainer,
+  UserImg,
   UsersConectedContainer,
   UsersConectedImg,
   UsersConectedImgContainer,
@@ -19,13 +17,19 @@ import {
 import Elon from "../../../assets/elon.jpg";
 import Bezos from "../../../assets/bezos.jpg";
 import Mark from "../../../assets/mark.jpg";
+import User from "../../../assets/letraf.jpg";
 import ElonVideo from "../../../assets/video/elon.mp4";
+import { StreamingHeader } from "./StreamingHeader";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faBorderNone,
-  faEllipsisH,
-  faInbox,
-  faVolumeDown,
+  faArrowsAlt,
+  faCogs,
+  faDesktop,
+  faExclamationTriangle,
+  faExpand,
+  faUserPlus,
+  faVideo,
+  faVolumeMute,
 } from "@fortawesome/free-solid-svg-icons";
 
 export const StreamingScreen = () => {
@@ -35,35 +39,16 @@ export const StreamingScreen = () => {
     { name: "markZ", img: Mark, color: "blue" },
   ];
 
+  const buttonOptions = [
+    { icon: faVideo, isRed: false },
+    { icon: faDesktop, isRed: false },
+    { icon: faCogs, isRed: false },
+    { icon: faExclamationTriangle, isRed: true },
+  ];
+
   return (
     <StreamingContainer>
-      <StreamingHeaderContainer>
-        <StreamingUsernameContainer>
-          <ChannelName>
-            <FontAwesomeIcon
-              icon={faVolumeDown}
-              className="fontawesome__channel"
-            />{" "}
-            team-work
-          </ChannelName>
-          <StreamerName>ElonX</StreamerName>
-        </StreamingUsernameContainer>
-        <HeaderOptionsContainer>
-          <QualityVideoContainer>
-            <QualityLabel>720p 30FPS</QualityLabel>
-            <LiveLabel>LIVE</LiveLabel>
-          </QualityVideoContainer>
-          <FontAwesomeIcon
-            icon={faBorderNone}
-            className="fontawesome__channel"
-          />
-          <FontAwesomeIcon
-            icon={faEllipsisH}
-            className="fontawesome__channel"
-          />
-          <FontAwesomeIcon icon={faInbox} className="fontawesome__channel" />
-        </HeaderOptionsContainer>
-      </StreamingHeaderContainer>
+      <StreamingHeader />
       <StreamingScreenContainer>
         <VideoStreaming width={1275} autoPlay muted>
           <source src={ElonVideo} type="video/mp4" />
@@ -79,6 +64,30 @@ export const StreamingScreen = () => {
           ))}
         </UsersConectedContainer>
       </StreamingScreenContainer>
+      <StreamingFooterContainer>
+        <StreamingControlsContainer>
+          <FontAwesomeIcon icon={faUserPlus} className="fontawesome__channel" />
+          <UserImg src={User} />
+        </StreamingControlsContainer>
+        <ButtonsContainer>
+          {buttonOptions.map((b, i) => (
+            <Button className={b.isRed && "isRed"} key={i}>
+              <FontAwesomeIcon icon={b.icon} className="fontawesome__button" />
+            </Button>
+          ))}
+        </ButtonsContainer>
+        <OtherOptionsContainer>
+          <FontAwesomeIcon
+            icon={faVolumeMute}
+            className="fontawesome__channel"
+          />
+          <FontAwesomeIcon
+            icon={faArrowsAlt}
+            className="fontawesome__channel"
+          />
+          <FontAwesomeIcon icon={faExpand} className="fontawesome__channel" />
+        </OtherOptionsContainer>
+      </StreamingFooterContainer>
     </StreamingContainer>
   );
 };
