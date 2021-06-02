@@ -26,12 +26,10 @@ export const Channel = () => {
         </Link>
       ))}
       <ChannelHeader title="VOICE-CHANNELS" />
-      {voiceChannels.map((c, i) => (
-        <Link to={"/" + c.name}>
-          <ChannelItem channelName={c.name} isVoice key={i} />
-        </Link>
-      ))}
+      <ChannelItem channelName="team-work" isVoice/>
       <UserVoiceConnected />
+      <ChannelItem channelName="business" isVoice/>
+      <ChannelItem channelName="brainstorming" isVoice/>
     </ChannelContainer>
   );
 };
