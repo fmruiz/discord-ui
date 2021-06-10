@@ -13,10 +13,6 @@ export const Channel = () => {
     { name: "memes" },
   ];
 
-  const voiceChannels = [
-    { name: "team-work", isVoice: true },
-  ];
-
   return (
     <ChannelContainer>
       <ChannelHeader title="THE OFFICE" />
