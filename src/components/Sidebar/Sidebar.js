@@ -1,5 +1,5 @@
 import React from "react";
-import { Divider, SidebarContainer, SidebarImage } from "./styles";
+import { AddServer, Divider, SidebarContainer, SidebarImage } from "./styles";
 import logo from "../../assets/logo.jpg";
 import david from "../../assets/david.jpg";
 import tesla from "../../assets/tesla.png";
@@ -12,6 +12,8 @@ import facebook from "../../assets/facebook.jpg";
 import meli from "../../assets/meli.jpg";
 import nvidia from "../../assets/nvidia.jpg";
 import epic from "../../assets/epic.jpeg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 export const Sidebar = () => {
   const images = [
@@ -30,11 +32,14 @@ export const Sidebar = () => {
 
   return (
     <SidebarContainer>
-      <SidebarImage src={logo} alt="Logo" className="logo__discord"/>
+      <SidebarImage src={logo} alt="Logo" className="logo__discord" />
       <Divider />
       {images.map((img) => (
         <SidebarImage src={img.logo} alt="user" />
       ))}
+      <AddServer>
+        <FontAwesomeIcon icon={faPlus} className="group__icon"/>
+      </AddServer>
     </SidebarContainer>
   );
 };

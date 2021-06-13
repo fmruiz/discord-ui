@@ -1,7 +1,7 @@
 export const theme = {
   COLORS: {
     white: "#ffffff",
-    sidebar: '#202225',
+    sidebar: "#202225",
     strongGray: "#202225a8",
     gray: "#2f3136",
     mediumGray: "#36393f",
@@ -18,6 +18,6 @@ export const theme = {
     darkLive: "#37474f",
     brownLive: "#432910",
     blueLive: "#0277bd",
+    plusIconSidebar: "#3ba55d",
   },
 };
-
