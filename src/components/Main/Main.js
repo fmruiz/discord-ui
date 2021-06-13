@@ -5,6 +5,7 @@ import { SidebarChannel } from "./SidebarChannel/SidebarChannel";
 import { ChatMain } from "./ChatMain/ChatMain";
 import { DashboardContainer, MainContainer } from "./styles";
 import { StreamingScreen } from "./StreamingScreen/StreamingScreen";
+import { PublicServers } from "../PublicServers/PublicServers";
 
 export const Main = () => {
   return (
@@ -41,6 +42,9 @@ export const Main = () => {
           </Route>
           <Route path="/elon">
             <StreamingScreen />
+          </Route>
+          <Route path="/public-servers">
+            <PublicServers />
           </Route>
         </DashboardContainer>
       </MainContainer>
