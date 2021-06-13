@@ -1,0 +1,4 @@
+// GROUPS
+export const ADD_GROUP = "ADD_GROUP";
+export const ADD_GROUP_SUCCESS = "ADD_GROUP_SUCCESS";
+export const ADD_GROUP_FAILED = "ADD_GROUP_FAILED";
