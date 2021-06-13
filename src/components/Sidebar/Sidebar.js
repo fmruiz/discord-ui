@@ -1,5 +1,22 @@
-import React from "react";
-import { AddServer, Divider, SidebarContainer, SidebarImage } from "./styles";
+import React, { useState } from "react";
+import {
+  AddServer,
+  CloseIconContainer,
+  Divider,
+  ModalFormButton,
+  ModalFormContainer,
+  ModalFormDisclosure,
+  ModalFormDisclosureBlue,
+  ModalFormHeader,
+  ModalFormInput,
+  ModalHeader,
+  ModalImg,
+  ModalImgContent,
+  ModalImgContentParagraph,
+  ModalSubtitle,
+  SidebarContainer,
+  SidebarImage,
+} from "./styles";
 import logo from "../../assets/logo.jpg";
 import david from "../../assets/david.jpg";
 import tesla from "../../assets/tesla.png";
@@ -13,9 +30,14 @@ import meli from "../../assets/meli.jpg";
 import nvidia from "../../assets/nvidia.jpg";
 import epic from "../../assets/epic.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faCamera, faPlus, faTimes } from "@fortawesome/free-solid-svg-icons";
+import ReactModal from "react-modal";
 
 export const Sidebar = () => {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(!show);
+  const handleOpen = () => setShow(!show);
+
   const images = [
     { logo: dev },
     { logo: david },
@@ -31,15 +53,75 @@ export const Sidebar = () => {
   ];
 
   return (
-    <SidebarContainer>
-      <SidebarImage src={logo} alt="Logo" className="logo__discord" />
-      <Divider />
-      {images.map((img) => (
-        <SidebarImage src={img.logo} alt="user" />
-      ))}
-      <AddServer>
-        <FontAwesomeIcon icon={faPlus} className="group__icon"/>
-      </AddServer>
-    </SidebarContainer>
+    <>
+      <SidebarContainer>
+        <SidebarImage src={logo} alt="Logo" className="logo__discord" />
+        <Divider />
+        {images.map((img) => (
+          <SidebarImage src={img.logo} alt="user" />
+        ))}
+        <AddServer onClick={handleOpen}>
+          <FontAwesomeIcon icon={faPlus} className="group__icon" />
+        </AddServer>
+        <ReactModal
+          isOpen={show}
+          style={{
+            overlay: {
+              position: "fixed",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              backgroundColor: "rgba(0, 0, 0, 0.50)",
+            },
+            content: {
+              position: "absolute",
+              top: "30vh",
+              left: "38vw",
+              border: "1px solid #ccc",
+              background: "#fff",
+              overflow: "auto",
+              WebkitOverflowScrolling: "touch",
+              borderRadius: "4px",
+              outline: "none",
+              width: "400px",
+              height: "410px",
+            },
+          }}
+          ariaHideApp={false}
+        >
+          <CloseIconContainer>
+            <FontAwesomeIcon
+              onClick={handleClose}
+              className="modal__close"
+              icon={faTimes}
+            />
+          </CloseIconContainer>
+          <ModalHeader>Customize your server</ModalHeader>
+          <ModalSubtitle>
+            Give your new server a personality with a name and an icon.
+            <br />
+            You can always change ir later.
+          </ModalSubtitle>
+          <ModalImg>
+            <ModalImgContent>
+              <FontAwesomeIcon icon={faCamera} className="modal__camera" />
+              <ModalImgContentParagraph>UPLOAD</ModalImgContentParagraph>
+            </ModalImgContent>
+          </ModalImg>
+          <ModalFormContainer>
+            <ModalFormHeader>SERVER NAME</ModalFormHeader>
+            <ModalFormInput />
+            <ModalFormDisclosure>
+              By creating a server, you agree to Discord's {" "}
+              <ModalFormDisclosureBlue>
+                Community Guidelines
+              </ModalFormDisclosureBlue>
+            </ModalFormDisclosure>
+          </ModalFormContainer>
+          <ModalFormButton className="form__button">Create</ModalFormButton>
+        </ReactModal>
+      </SidebarContainer>
+    </>
   );
 };
