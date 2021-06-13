@@ -14,6 +14,7 @@ import {
   ModalImgContent,
   ModalImgContentParagraph,
   ModalSubtitle,
+  PublicServer,
   SidebarContainer,
   SidebarImage,
 } from "./styles";
@@ -30,8 +31,14 @@ import meli from "../../assets/meli.jpg";
 import nvidia from "../../assets/nvidia.jpg";
 import epic from "../../assets/epic.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCamera, faPlus, faTimes } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCamera,
+  faCompass,
+  faPlus,
+  faTimes,
+} from "@fortawesome/free-solid-svg-icons";
 import ReactModal from "react-modal";
+import { Link } from "react-router-dom";
 
 export const Sidebar = () => {
   const [show, setShow] = useState(false);
@@ -63,6 +70,11 @@ export const Sidebar = () => {
         <AddServer onClick={handleOpen}>
           <FontAwesomeIcon icon={faPlus} className="group__icon" />
         </AddServer>
+        <Link to="/public-servers">
+          <PublicServer>
+            <FontAwesomeIcon icon={faCompass} className="publicServer__icon" />
+          </PublicServer>
+        </Link>
         <ReactModal
           isOpen={show}
           style={{
@@ -113,7 +125,7 @@ export const Sidebar = () => {
             <ModalFormHeader>SERVER NAME</ModalFormHeader>
             <ModalFormInput />
             <ModalFormDisclosure>
-              By creating a server, you agree to Discord's {" "}
+              By creating a server, you agree to Discord's{" "}
               <ModalFormDisclosureBlue>
                 Community Guidelines
               </ModalFormDisclosureBlue>

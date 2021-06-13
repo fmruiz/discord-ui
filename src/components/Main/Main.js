@@ -8,11 +8,21 @@ import { StreamingScreen } from "./StreamingScreen/StreamingScreen";
 
 export const Main = () => {
   return (
-    <MainContainer>
-      <SidebarChannel />
-      <DashboardContainer>
-        <Redirect from="/" to="/welcome" />
-        <Switch>
+    <Switch>
+      <MainContainer>
+        <Route
+          path={[
+            "/welcome",
+            "/general-chat",
+            "/music-requests",
+            "/memes",
+            "/elon",
+          ]}
+        >
+          <SidebarChannel />
+        </Route>
+        <DashboardContainer>
+          <Redirect from="/" to="/welcome" />
           <Route path="/welcome">
             <Header title="welcome" />
             <ChatMain isWelcome />
@@ -32,8 +42,8 @@ export const Main = () => {
           <Route path="/elon">
             <StreamingScreen />
           </Route>
-        </Switch>
-      </DashboardContainer>
-    </MainContainer>
+        </DashboardContainer>
+      </MainContainer>
+    </Switch>
   );
 };

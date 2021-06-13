@@ -78,6 +78,36 @@ export const AddServer = styled.div`
   }
 `;
 
+export const PublicServer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin: 10px auto 0px auto;
+  transition: all 0.5s;
+  background-color: ${(props) => props.theme.COLORS.gray};
+
+  .publicServer__icon {
+    font-size: 22px;
+    color: ${(props) => props.theme.COLORS.plusIconSidebar};
+    transition: all 0.5s;
+  }
+
+  :hover {
+    border-radius: 30%;
+    cursor: pointer;
+    transition: all 0.5s;
+    background-color: ${(props) => props.theme.COLORS.plusIconSidebar};
+
+    .publicServer__icon {
+      color: white;
+      transition: all 0.5s;
+    }
+  }
+`;
+
 export const CloseIconContainer = styled.div`
   display: flex;
   justify-content: flex-end;
