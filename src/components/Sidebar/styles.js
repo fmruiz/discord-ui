@@ -18,14 +18,8 @@ export const SidebarContainer = styled.div`
     }
   }
 
-  .modal {
-    transition: all 0.5s;
-    height: 100px;
-    width: 500px;
-  }
-
-  .noModal {
-    display: none;
+  .sidebarImg__logo {
+    margin: 0 auto;
   }
 `;
 

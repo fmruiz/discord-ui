@@ -41,6 +41,7 @@ import ReactModal from "react-modal";
 import { Link } from "react-router-dom";
 
 export const Sidebar = () => {
+  // modal state
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(!show);
   const handleOpen = () => setShow(!show);
@@ -62,7 +63,9 @@ export const Sidebar = () => {
   return (
     <>
       <SidebarContainer>
-        <SidebarImage src={logo} alt="Logo" className="logo__discord" />
+        <Link to="/welcome" className="sidebarImg__logo">
+          <SidebarImage src={logo} alt="Logo" className="logo__discord" />
+        </Link>
         <Divider />
         {images.map((img) => (
           <SidebarImage src={img.logo} alt="user" />
