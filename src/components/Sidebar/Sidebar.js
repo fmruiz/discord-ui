@@ -53,6 +53,7 @@ export const Sidebar = () => {
   useEffect(() => {
     const initialGroups = () => dispatch(getGroupsAction());
     initialGroups();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   // groups global state
   // const { groups } = useSelector((state) => state.groups);
