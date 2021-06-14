@@ -73,11 +73,9 @@ export const Sidebar = () => {
         <AddServer onClick={handleOpen}>
           <FontAwesomeIcon icon={faPlus} className="group__icon" />
         </AddServer>
-        <Link to="/public-servers">
-          <PublicServer>
-            <FontAwesomeIcon icon={faCompass} className="publicServer__icon" />
-          </PublicServer>
-        </Link>
+        <PublicServer>
+          <FontAwesomeIcon icon={faCompass} className="publicServer__icon" />
+        </PublicServer>
         <ReactModal
           isOpen={show}
           style={{
