@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   AddServer,
   CloseIconContainer,
@@ -39,12 +39,23 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import ReactModal from "react-modal";
 import { Link } from "react-router-dom";
+// REDUX
+import { useDispatch } from "react-redux";
+import { getGroupsAction } from "../../redux/actions/groupsActions";
 
 export const Sidebar = () => {
   // modal state
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(!show);
   const handleOpen = () => setShow(!show);
+  // effect
+  const dispatch = useDispatch();
+  useEffect(() => {
+    const initialGroups = () => dispatch(getGroupsAction());
+    initialGroups();
+  }, []);
+  // groups global state
+  // const { groups } = useSelector((state) => state.groups);
 
   const images = [
     { logo: dev },
