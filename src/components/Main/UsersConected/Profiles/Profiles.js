@@ -24,9 +24,8 @@ export const Profiles = () => {
   // effect
   const dispatch = useDispatch();
   useEffect(() => {
-    const initialUsers = () => dispatch(getUsersAction());
-    initialUsers();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    dispatch(getUsersAction());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   // users global state
   // const { users } = useSelector((state) => state.users);
