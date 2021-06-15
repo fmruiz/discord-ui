@@ -17,25 +17,18 @@ export const Channel = () => {
     dispatch(getVoiceChannelsAction());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  // channels global state
-  const state = useSelector((state) => state);
-  console.log(state);
-
-  const textChannels = [
-    { name: "welcome" },
-    { name: "general-chat" },
-    { name: "music-requests" },
-    { name: "memes" },
-  ];
+  // voice & text channels global state
+  const { textChannel } = useSelector((state) => state.textChannel);
 
   return (
     <ChannelContainer>
       <ChannelHeader title="THE OFFICE" />
-      {textChannels.map((c, i) => (
-        <Link to={"/" + c.name}>
-          <ChannelItem channelName={c.name} key={i} />
-        </Link>
-      ))}
+      {textChannel &&
+        textChannel.map((c, i) => (
+          <Link to={"/" + c.name}>
+            <ChannelItem channelName={c.name} key={i} />
+          </Link>
+        ))}
       <ChannelHeader title="VOICE-CHANNELS" />
       <ChannelItem channelName="team-work" isVoice />
       <UserVoiceConnected />

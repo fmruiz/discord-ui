@@ -3,13 +3,15 @@ import {
   GET_TEXTCHANNELS_SUCCESS,
   GET_TEXTCHANNELS_FAILED,
 } from "../types/index";
+import backend from "../../apis/backend";
 
 // Get Text channels
 export const getTextChannelsAction = () => {
   return async (dispatch) => {
     dispatch(getTextChannels());
     try {
-      dispatch(getTextChannelsSuccess());
+      const res = await backend.get("/api/text-channels");
+      dispatch(getTextChannelsSuccess(res.data));
     } catch (error) {
       console.log(error);
       dispatch(getTextChannelsFailed());
@@ -22,9 +24,9 @@ const getTextChannels = () => ({
   payload: true,
 });
 
-const getTextChannelsSuccess = () => ({
+const getTextChannelsSuccess = (textChannel) => ({
   type: GET_TEXTCHANNELS_SUCCESS,
-  payload: "",
+  payload: textChannel,
 });
 
 const getTextChannelsFailed = () => ({

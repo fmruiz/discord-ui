@@ -6,5 +6,5 @@ import textChannelsReducer from "./textChannelsReducer";
 export default combineReducers({
   users: usersReducer,
   groups: groupsReducer,
-  textChannels: textChannelsReducer,
+  textChannel: textChannelsReducer,
 });
