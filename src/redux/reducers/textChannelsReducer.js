@@ -10,7 +10,7 @@ const initialState = {
   error: false,
 };
 
-export default function channelsReducer(state = initialState, action) {
+export default function textChannelsReducer(state = initialState, action) {
   switch (action.type) {
     case GET_TEXTCHANNELS:
       return {

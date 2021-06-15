@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { UserVoiceConnected } from "./UserVoiceConnected/UserVoiceConnected";
 // REDUX
 import { useDispatch, useSelector } from "react-redux";
-import { getTextChannelsAction } from "../../../../redux/actions/channelsActions";
+import { getTextChannelsAction } from "../../../../redux/actions/textChannelsActions";
 
 export const Channel = () => {
   // effect
