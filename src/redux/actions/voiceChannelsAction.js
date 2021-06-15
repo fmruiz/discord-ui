@@ -3,12 +3,15 @@ import {
   GET_VOICECHANNELS_SUCCESS,
   GET_VOICECHANNELS_FAILED,
 } from "../types/index";
+import backend from "../../apis/backend";
 
+// Get voice channels
 export const getVoiceChannelsAction = () => {
-  return (dispatch) => {
+  return async (dispatch) => {
     dispatch(getVoiceChannels());
     try {
-      dispatch(getVoiceChannelsSuccess());
+      const res = await backend.get("/api/voice-channels");
+      dispatch(getVoiceChannelsSuccess(res.data));
     } catch (error) {
       console.log(error);
       dispatch(getVoiceChannelsFailed());
@@ -21,9 +24,9 @@ const getVoiceChannels = () => ({
   payload: true,
 });
 
-const getVoiceChannelsSuccess = () => ({
+const getVoiceChannelsSuccess = (voiceChannel) => ({
   type: GET_VOICECHANNELS_SUCCESS,
-  payload: "",
+  payload: voiceChannel,
 });
 
 const getVoiceChannelsFailed = () => ({

@@ -19,6 +19,7 @@ export const Channel = () => {
   }, []);
   // voice & text channels global state
   const { textChannel } = useSelector((state) => state.textChannel);
+  const { voiceChannel } = useSelector((state) => state.voiceChannel);
 
   return (
     <ChannelContainer>
@@ -32,8 +33,10 @@ export const Channel = () => {
       <ChannelHeader title="VOICE-CHANNELS" />
       <ChannelItem channelName="team-work" isVoice />
       <UserVoiceConnected />
-      <ChannelItem channelName="business" isVoice />
-      <ChannelItem channelName="brainstorming" isVoice />
+      {voiceChannel &&
+        voiceChannel.map((v, i) => (
+          <ChannelItem key={i} channelName={v.name} isVoice />
+        ))}
     </ChannelContainer>
   );
 };
