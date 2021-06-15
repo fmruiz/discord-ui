@@ -1,29 +1,29 @@
 import {
-  GET_TEXTCHANNELS,
-  GET_TEXTCHANNELS_SUCCESS,
-  GET_TEXTCHANNELS_FAILED,
+  GET_VOICECHANNELS,
+  GET_VOICECHANNELS_SUCCESS,
+  GET_VOICECHANNELS_FAILED,
 } from "../types/index";
 
 const initialState = {
-  textChannel: [],
+  voiceChannel: [],
   loading: false,
   error: false,
 };
 
-export default function textChannelsReducer(state = initialState, action) {
+export default function voiceChannelsReducer(state = initialState, action) {
   switch (action.type) {
-    case GET_TEXTCHANNELS:
+    case GET_VOICECHANNELS:
       return {
         ...state,
         loading: action.payload,
       };
-    case GET_TEXTCHANNELS_SUCCESS:
+    case GET_VOICECHANNELS_SUCCESS:
       return {
         ...state,
         loading: false,
-        textChannel: action.payload,
+        voiceChannel: action.payload,
       };
-    case GET_TEXTCHANNELS_FAILED:
+    case GET_VOICECHANNELS_FAILED:
       return {
         ...state,
         loading: false,

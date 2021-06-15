@@ -7,13 +7,15 @@ import { UserVoiceConnected } from "./UserVoiceConnected/UserVoiceConnected";
 // REDUX
 import { useDispatch, useSelector } from "react-redux";
 import { getTextChannelsAction } from "../../../../redux/actions/textChannelsActions";
+import { getVoiceChannelsAction } from "../../../../redux/actions/voiceChannelsAction";
 
 export const Channel = () => {
   // effect
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getTextChannelsAction());
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    dispatch(getVoiceChannelsAction());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   // channels global state
   const state = useSelector((state) => state);
