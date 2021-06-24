@@ -1,13 +1,14 @@
 import { GET_LOGO, GET_LOGO_SUCCESS, GET_LOGO_FAILED } from "../types/index";
-import { strapiCms } from "../../apis/backend";
+import { logoQueries } from "../queries";
+import { graphCms } from "../../apis/backend";
 
 // Get Logo
 export const getLogoAction = () => {
   return async (dispatch) => {
     dispatch(getLogo());
     try {
-      const res = await strapiCms.get("/uploads/logo_42e4036c6f.jpg");
-      dispatch(getLogoSuccess(res.request.responseURL));
+      const res = await graphCms.request(logoQueries);
+      dispatch(getLogoSuccess(res.assets[0]));
     } catch (error) {
       console.log(error);
       dispatch(getLogoFailed());

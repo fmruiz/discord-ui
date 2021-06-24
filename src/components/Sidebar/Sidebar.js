@@ -58,7 +58,7 @@ export const Sidebar = () => {
   }, []);
   // global state
   // const { groups } = useSelector((state) => state.groups);
-  const { logo } = useSelector(state => state.logo)
+  const { url } = useSelector((state) => state.logo.logo);
 
   const images = [
     { logo: dev },
@@ -78,7 +78,7 @@ export const Sidebar = () => {
     <>
       <SidebarContainer>
         <Link to="/welcome" className="sidebarImg__logo">
-          <SidebarImage src={logo} alt="Logo" className="logo__discord" />
+          <SidebarImage src={url} alt="Logo" className="logo__discord" />
         </Link>
         <Divider />
         {images.map((img) => (
