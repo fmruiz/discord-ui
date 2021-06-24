@@ -18,7 +18,7 @@ import {
   SidebarContainer,
   SidebarImage,
 } from "./styles";
-import logo from "../../assets/logo.jpg";
+// import logo from "../../assets/logo.jpg";
 import david from "../../assets/david.jpg";
 import tesla from "../../assets/tesla.png";
 import dev from "../../assets/dev.jpg";
@@ -40,7 +40,7 @@ import {
 import ReactModal from "react-modal";
 import { Link } from "react-router-dom";
 // REDUX
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getGroupsAction } from "../../redux/actions/groupsActions";
 import { getLogoAction } from "../../redux/actions/logoActions";
 
@@ -56,8 +56,9 @@ export const Sidebar = () => {
     dispatch(getLogoAction());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  // groups global state
+  // global state
   // const { groups } = useSelector((state) => state.groups);
+  const { logo } = useSelector(state => state.logo)
 
   const images = [
     { logo: dev },
