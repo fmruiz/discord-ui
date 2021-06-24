@@ -42,6 +42,7 @@ import { Link } from "react-router-dom";
 // REDUX
 import { useDispatch } from "react-redux";
 import { getGroupsAction } from "../../redux/actions/groupsActions";
+import { getLogoAction } from "../../redux/actions/logoActions";
 
 export const Sidebar = () => {
   // modal state
@@ -51,9 +52,9 @@ export const Sidebar = () => {
   // effect
   const dispatch = useDispatch();
   useEffect(() => {
-    const initialGroups = () => dispatch(getGroupsAction());
-    initialGroups();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    dispatch(getGroupsAction());
+    dispatch(getLogoAction());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   // groups global state
   // const { groups } = useSelector((state) => state.groups);
