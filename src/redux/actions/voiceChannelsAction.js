@@ -3,7 +3,7 @@ import {
   GET_VOICECHANNELS_SUCCESS,
   GET_VOICECHANNELS_FAILED,
 } from "../types/index";
-import backend from "../../apis/backend";
+import { backend } from "../../apis/backend";
 
 // Get voice channels
 export const getVoiceChannelsAction = () => {

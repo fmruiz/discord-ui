@@ -1,5 +1,5 @@
 import { GET_LOGO, GET_LOGO_SUCCESS, GET_LOGO_FAILED } from "../types/index";
-import cms from "../../apis/cms";
+import cms from "../../apis/strapiCms";
 
 // Get Logo
 export const getLogoAction = () => {

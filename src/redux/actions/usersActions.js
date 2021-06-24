@@ -1,5 +1,5 @@
 import { GET_USERS, GET_USERS_SUCCESS, GET_USERS_FAILED } from "../types/index";
-import backend from "../../apis/backend";
+import { backend } from "../../apis/backend";
 
 export function getUsersAction() {
   return async (dispatch) => {

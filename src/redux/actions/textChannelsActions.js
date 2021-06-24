@@ -3,7 +3,7 @@ import {
   GET_TEXTCHANNELS_SUCCESS,
   GET_TEXTCHANNELS_FAILED,
 } from "../types/index";
-import backend from "../../apis/backend";
+import { backend } from "../../apis/backend";
 
 // Get Text channels
 export const getTextChannelsAction = () => {

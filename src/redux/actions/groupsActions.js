@@ -3,7 +3,7 @@ import {
   GET_GROUPS_SUCCESS,
   GET_GROUPS_FAILED,
 } from "../types/index";
-import backend from "../../apis/backend";
+import { backend } from "../../apis/backend";
 
 export function getGroupsAction() {
   return async (dispatch) => {
