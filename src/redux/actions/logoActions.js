@@ -1,6 +1,6 @@
 import { GET_LOGO, GET_LOGO_SUCCESS, GET_LOGO_FAILED } from "../types/index";
 import { logoQueries } from "../queries";
-import { graphCms } from "../../apis/backend";
+import { graphCms } from "../../apis/graphCms";
 
 // Get Logo
 export const getLogoAction = () => {
