@@ -1,6 +1,4 @@
 import { GraphQLClient } from "graphql-request";
+import { endpoints } from "../redux/endpoints";
 
-export const graphCms = new GraphQLClient(
-  process.env.REACT_APP_GRAPHCMS || "",
-  { headers: {} }
-);
+export const graphCms = new GraphQLClient(endpoints.CMS_URL, { headers: {} });
