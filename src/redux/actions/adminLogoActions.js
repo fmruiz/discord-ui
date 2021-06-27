@@ -6,7 +6,7 @@ import {
 import { graphCms } from "../../apis/graphCms";
 import { queries } from "../graphCms/cmsQueries";
 
-export const getAdminLogoAction = () => {
+export function getAdminLogoAction() {
   return async (dispatch) => {
     dispatch(getAdminLogo());
     try {
@@ -17,7 +17,7 @@ export const getAdminLogoAction = () => {
       dispatch(getAdminLogoError());
     }
   };
-};
+}
 
 const getAdminLogo = () => ({
   type: GET_ADMINLOGO,
