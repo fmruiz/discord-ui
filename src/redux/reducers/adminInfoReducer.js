@@ -6,7 +6,7 @@ import {
 
 const initialState = {
   adminInfo: [],
-  loading: false,
+  loading: true,
   error: false,
 };
 

@@ -15,10 +15,8 @@ import {
   FooterOptionsContainer,
   UserContainer,
 } from "./styles";
-import LetraF from "../../../../assets/letraf.jpg";
 import { useDispatch, useSelector } from "react-redux";
 import { getAdminInfoAction } from "../../../../redux/actions/adminInfoActions";
-import { getAdminLogoAction } from "../../../../redux/actions/adminLogoActions";
 // import { UserVoice } from "./UserVoice/UserVoice";
 
 export const SidebarFooter = () => {
@@ -27,23 +25,25 @@ export const SidebarFooter = () => {
   const [onHeadset, setOnHeadset] = useState(false);
   const isMicroMuted = () => setOnMicro(!onMicro);
   const isHeadsetMuted = () => setOnHeadset(!onHeadset);
-  
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAdminInfoAction());
-    dispatch(getAdminLogoAction())
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   // adminInfo global state
   const { adminInfo } = useSelector((state) => state.adminInfo);
-  const { adminLogo } = useSelector(state => state.adminLogo)
+  const { loading } = useSelector((state) => state.adminInfo);
 
   return (
     <SidebarChannelFooter>
       {/* <UserVoice /> */}
       <UserContainer>
         <FooterUserContainer>
-          <FooterUserImg src={LetraF} alt="user" />
+          <FooterUserImg
+            src={loading === false && adminInfo.logo.url}
+            alt="user"
+          />
           <FooterUsernameContainer>
             <FooterUsername>{adminInfo.name}</FooterUsername>
             <FooterUserCode>{adminInfo.discordId}</FooterUserCode>

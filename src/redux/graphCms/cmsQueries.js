@@ -15,12 +15,6 @@ export const queries = {
         id
         name
         discordId
-      }
-    }
-  `,
-  adminLogoQuery: gql`
-    {
-      adminLogo(where: { id: "ckqfcu6nsa5k50a76ofa64ui2" }) {
         logo {
           url
         }
