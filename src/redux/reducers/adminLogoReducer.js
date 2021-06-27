@@ -17,6 +17,18 @@ export default function adminLogoReducer(state = initialState, action) {
         ...state,
         loading: action.payload,
       };
+    case GET_ADMINLOGO_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        adminLogo: action.payload,
+      };
+    case GET_ADMINLOGO_FAILED:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+      };
     default:
       return state;
   }

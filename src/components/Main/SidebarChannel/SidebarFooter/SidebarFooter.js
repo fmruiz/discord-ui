@@ -36,6 +36,7 @@ export const SidebarFooter = () => {
   }, []);
   // adminInfo global state
   const { adminInfo } = useSelector((state) => state.adminInfo);
+  const { adminLogo } = useSelector(state => state.adminLogo)
 
   return (
     <SidebarChannelFooter>
