@@ -14,6 +14,7 @@ export function getAdminInfoAction() {
       dispatch(getAdminInfoSuccess(res.adminInfo));
     } catch (error) {
       console.log(error);
+      dispatch(getAdminInfoError());
     }
   };
 }
@@ -26,4 +27,9 @@ const getAdminInfo = () => ({
 const getAdminInfoSuccess = (adminInfo) => ({
   type: GET_ADMININFO_SUCCESS,
   payload: adminInfo,
+});
+
+const getAdminInfoError = () => ({
+  type: GET_ADMININFO_FAILED,
+  payload: true,
 });

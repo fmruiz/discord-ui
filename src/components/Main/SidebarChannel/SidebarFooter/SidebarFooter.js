@@ -21,18 +21,19 @@ import { getAdminInfoAction } from "../../../../redux/actions/adminInfoActions";
 // import { UserVoice } from "./UserVoice/UserVoice";
 
 export const SidebarFooter = () => {
+  // micro on - off
   const [onMicro, setOnMicro] = useState(false);
   const [onHeadset, setOnHeadset] = useState(false);
-
   const isMicroMuted = () => setOnMicro(!onMicro);
   const isHeadsetMuted = () => setOnHeadset(!onHeadset);
-
+  
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAdminInfoAction());
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  // const state = useSelector(state => state)
+  // adminInfo global state
+  const { adminInfo } = useSelector((state) => state.adminInfo);
 
   return (
     <SidebarChannelFooter>
@@ -41,8 +42,8 @@ export const SidebarFooter = () => {
         <FooterUserContainer>
           <FooterUserImg src={LetraF} alt="user" />
           <FooterUsernameContainer>
-            <FooterUsername>FrancoDev</FooterUsername>
-            <FooterUserCode>#4641</FooterUserCode>
+            <FooterUsername>{adminInfo.name}</FooterUsername>
+            <FooterUserCode>{adminInfo.discordId}</FooterUserCode>
           </FooterUsernameContainer>
         </FooterUserContainer>
         <FooterOptionsContainer>

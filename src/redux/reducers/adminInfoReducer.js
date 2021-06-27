@@ -17,6 +17,18 @@ export default function adminInfoReducer(state = initialState, action) {
         ...state,
         loading: action.payload,
       };
+    case GET_ADMININFO_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        adminInfo: action.payload,
+      };
+    case GET_ADMININFO_FAILED:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+      };
     default:
       return state;
   }
