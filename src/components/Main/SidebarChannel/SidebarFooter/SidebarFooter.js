@@ -18,6 +18,7 @@ import {
 import LetraF from "../../../../assets/letraf.jpg";
 import { useDispatch, useSelector } from "react-redux";
 import { getAdminInfoAction } from "../../../../redux/actions/adminInfoActions";
+import { getAdminLogoAction } from "../../../../redux/actions/adminLogoActions";
 // import { UserVoice } from "./UserVoice/UserVoice";
 
 export const SidebarFooter = () => {
@@ -30,6 +31,7 @@ export const SidebarFooter = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAdminInfoAction());
+    dispatch(getAdminLogoAction())
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   // adminInfo global state
