@@ -4,6 +4,7 @@ import groupsReducer from "./groupsReducer";
 import textChannelsReducer from "./textChannelsReducer";
 import voiceChannelsReducer from "./voiceChannelsReducer";
 import logoReducer from "./logoReducer";
+import adminInfoReducer from "./adminInfoReducer";
 
 export default combineReducers({
   users: usersReducer,
@@ -11,4 +12,5 @@ export default combineReducers({
   textChannel: textChannelsReducer,
   voiceChannel: voiceChannelsReducer,
   logo: logoReducer,
+  adminInfo: adminInfoReducer,
 });
