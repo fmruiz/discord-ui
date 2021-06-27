@@ -9,5 +9,16 @@ export const queries = {
       }
     }
   `,
+  adminInfoQuery: gql`
+    {
+      adminInfo(where: { id: "ckqcg0808tny90a79kf7f5bnl" }) {
+        id
+        name
+        logo {
+          id
+          url
+        }
+      }
+    }
+  `,
 };
-
