@@ -1,10 +1,10 @@
+import React, { useState, useEffect } from "react";
 import {
   faCog,
   faHeadphonesAlt,
   faMicrophone,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
 import {
   FooterUsername,
   FooterUserContainer,
@@ -16,6 +16,8 @@ import {
   UserContainer,
 } from "./styles";
 import LetraF from "../../../../assets/letraf.jpg";
+import { useDispatch, useSelector } from "react-redux";
+import { getAdminInfoAction } from "../../../../redux/actions/adminInfoActions";
 // import { UserVoice } from "./UserVoice/UserVoice";
 
 export const SidebarFooter = () => {
@@ -24,6 +26,13 @@ export const SidebarFooter = () => {
 
   const isMicroMuted = () => setOnMicro(!onMicro);
   const isHeadsetMuted = () => setOnHeadset(!onHeadset);
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getAdminInfoAction());
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  // const state = useSelector(state => state)
 
   return (
     <SidebarChannelFooter>
