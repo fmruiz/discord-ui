@@ -3,12 +3,15 @@ import {
   GET_STREAMINGUSERS_SUCCESS,
   GET_STREAMINGUSERS_FAILED,
 } from "../types/index";
+import { graphCms } from "../../apis/graphCms";
+import { queries } from "../graphCms/cmsQueries";
 
 export function getStreamingUsersAction() {
-  return (dispatch) => {
+  return async (dispatch) => {
     dispatch(getStreamingUsers());
     try {
-      dispatch(getStreamingUsersSuccess());
+      const res = await graphCms.request(queries.streamingUsersQuery);
+      dispatch(getStreamingUsersSuccess(res.streamingUsers));
     } catch (error) {
       console.log(error);
       dispatch(getStreamingUsersFailed());
@@ -21,9 +24,9 @@ const getStreamingUsers = () => ({
   payload: true,
 });
 
-const getStreamingUsersSuccess = () => ({
+const getStreamingUsersSuccess = (streamingUsers) => ({
   type: GET_STREAMINGUSERS_SUCCESS,
-  payload: "",
+  payload: streamingUsers,
 });
 
 const getStreamingUsersFailed = () => ({

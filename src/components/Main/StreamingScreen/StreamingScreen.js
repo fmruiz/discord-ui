@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   StreamingContainer,
   StreamingScreenContainer,
@@ -8,20 +8,22 @@ import {
   UsersConectedName,
   VideoStreaming,
 } from "./styles";
-import Elon from "../../../assets/elon.jpg";
-import Bezos from "../../../assets/bezos.jpg";
-import Mark from "../../../assets/mark.jpg";
 import User from "../../../assets/letraf.jpg";
 import ElonVideo from "../../../assets/video/elon.mp4";
 import { StreamingHeader } from "./StreamingHeader";
 import { StreamingFooter } from "./StreamingFooter";
+import { useDispatch, useSelector } from "react-redux";
+import { getStreamingUsersAction } from "../../../redux/actions/streamingUsersActions";
 
 export const StreamingScreen = () => {
-  const streamingUsers = [
-    { name: "ElonX", img: Elon, color: "dark" },
-    { name: "Mr.Jeff", img: Bezos, color: "brown" },
-    { name: "markZ", img: Mark, color: "blue" },
-  ];
+  // effect
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getStreamingUsersAction());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  // global state streaming users
+  const { streamingUsers } = useSelector((state) => state.streamingUsers);
 
   return (
     <StreamingContainer>
@@ -33,7 +35,7 @@ export const StreamingScreen = () => {
         <UsersConectedContainer>
           {streamingUsers.map((s, i) => (
             <UsersConectedImgContainer className={s.color} key={i}>
-              <UsersConectedImg src={s.img} />
+              <UsersConectedImg src={s.img.url} />
               <UsersConectedName className="user__name">
                 {s.name}
               </UsersConectedName>

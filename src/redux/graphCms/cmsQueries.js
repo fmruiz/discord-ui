@@ -56,4 +56,15 @@ export const queries = {
       }
     }
   `,
+  streamingUsersQuery: gql`
+    {
+      streamingUsers {
+        name
+        img {
+          url
+        }
+        color
+      }
+    }
+  `,
 };
