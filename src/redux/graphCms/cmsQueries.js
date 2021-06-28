@@ -30,4 +30,18 @@ export const queries = {
       }
     }
   `,
+  musicPublicationsQuery: gql`
+    {
+      musicPublications {
+        username
+        img {
+          url
+        }
+        link
+        iframe
+        artist
+        songName
+      }
+    }
+  `,
 };

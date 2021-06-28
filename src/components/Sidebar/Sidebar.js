@@ -18,18 +18,6 @@ import {
   SidebarContainer,
   SidebarImage,
 } from "./styles";
-// import logo from "../../assets/logo.jpg";
-import david from "../../assets/david.jpg";
-import tesla from "../../assets/tesla.png";
-import dev from "../../assets/dev.jpg";
-import google from "../../assets/google.png";
-import samsung from "../../assets/samsung.png";
-import apple from "../../assets/apple.jpg";
-import microsoft from "../../assets/microsoft.jpeg";
-import facebook from "../../assets/facebook.jpg";
-import meli from "../../assets/meli.jpg";
-import nvidia from "../../assets/nvidia.jpg";
-import epic from "../../assets/epic.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCamera,
