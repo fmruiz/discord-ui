@@ -14,20 +14,28 @@ import { Link } from "react-router-dom";
 export const UserVoiceConnected = () => {
   const profilesData = [
     {
+      name: "ElonX",
+      logo: Elon,
+      inStreaming: true,
+      path: "/elon",
+    },
+    {
       name: "Mr.Jeff",
       logo: Bezos,
       inStreaming: false,
+      path: "/welcome",
     },
     {
       name: "markZ",
       logo: Mark,
       inStreaming: false,
+      path: "/welcome",
     },
   ];
 
   return (
     <>
-      <Link to="/elon">
+      {/* <Link to="/elon">
         <UserVoiceConnectedContainer>
           <UserVoiceConnectedProfiles>
             <ProfilesImg src={Elon} alt="profile-img" />
@@ -35,15 +43,17 @@ export const UserVoiceConnected = () => {
           </UserVoiceConnectedProfiles>
           <LiveTag />
         </UserVoiceConnectedContainer>
-      </Link>
+      </Link> */}
       {profilesData.map((p, i) => (
-        <UserVoiceConnectedContainer key={i}>
-          <UserVoiceConnectedProfiles>
-            <ProfilesImg src={p.logo} alt="profile-img" />
-            <ProfilesName>{p.name}</ProfilesName>
-          </UserVoiceConnectedProfiles>
-          {p.inStreaming && <LiveTag />}
-        </UserVoiceConnectedContainer>
+        <Link to={p.path}>
+          <UserVoiceConnectedContainer key={i}>
+            <UserVoiceConnectedProfiles>
+              <ProfilesImg src={p.logo} alt="profile-img" />
+              <ProfilesName>{p.name}</ProfilesName>
+            </UserVoiceConnectedProfiles>
+            {p.inStreaming && <LiveTag />}
+          </UserVoiceConnectedContainer>
+        </Link>
       ))}
     </>
   );

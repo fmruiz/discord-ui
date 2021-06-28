@@ -44,4 +44,16 @@ export const queries = {
       }
     }
   `,
+  voiceUsersQuery: gql`
+    {
+      voiceUsers {
+        name
+        logo {
+          url
+        }
+        isStreaming
+        path
+      }
+    }
+  `,
 };
