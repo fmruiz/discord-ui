@@ -3,12 +3,15 @@ import {
   GET_CHANNELIMAGES_SUCCESS,
   GET_CHANNELIMAGES_FAILED,
 } from "../types/index";
+import { graphCms } from "../../apis/graphCms";
+import { queries } from "../graphCms/cmsQueries";
 
 export function getChannelImagesAction() {
-  return (dispatch) => {
+  return async (dispatch) => {
     dispatch(getChannelImages());
     try {
-      dispatch(getChannelImagesSuccess());
+      const res = await graphCms.request(queries.channelImagesQuery);
+      dispatch(getChannelImagesSuccess(res.channelImages));
     } catch (error) {
       console.log(error);
       dispatch(getChannelImagesFailed());
@@ -21,9 +24,9 @@ const getChannelImages = () => ({
   payload: true,
 });
 
-const getChannelImagesSuccess = () => ({
+const getChannelImagesSuccess = (channelImgs) => ({
   type: GET_CHANNELIMAGES_SUCCESS,
-  payload: "",
+  payload: channelImgs,
 });
 
 const getChannelImagesFailed = () => ({

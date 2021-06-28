@@ -43,6 +43,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getGroupsAction } from "../../redux/actions/groupsActions";
 import { getLogoAction } from "../../redux/actions/logoActions";
+import { getChannelImagesAction } from "../../redux/actions/channelImagesActions";
 
 export const Sidebar = () => {
   // modal state
@@ -54,35 +55,27 @@ export const Sidebar = () => {
   useEffect(() => {
     dispatch(getGroupsAction());
     dispatch(getLogoAction());
+    dispatch(getChannelImagesAction());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  // global state
-  // const { groups } = useSelector((state) => state.groups);
-  const { url } = useSelector((state) => state.logo.logo);
-
-  const images = [
-    { logo: dev },
-    { logo: david },
-    { logo: tesla },
-    { logo: microsoft },
-    { logo: google },
-    { logo: meli },
-    { logo: facebook },
-    { logo: apple },
-    { logo: samsung },
-    { logo: nvidia },
-    { logo: epic },
-  ];
+  // global state images
+  const { logo } = useSelector((state) => state.logo);
+  const { channelImages } = useSelector((state) => state.channelImage);
+  const { loading } = useSelector((state) => state.channelImage);
 
   return (
     <>
       <SidebarContainer>
         <Link to="/welcome" className="sidebarImg__logo">
-          <SidebarImage src={url} alt="Logo" className="logo__discord" />
+          <SidebarImage src={logo.url} alt="Logo" className="logo__discord" />
         </Link>
         <Divider />
-        {images.map((img) => (
-          <SidebarImage src={img.logo} alt="user" />
+        {channelImages.map((c, i) => (
+          <SidebarImage
+            src={loading === false && c.img.url}
+            alt="user"
+            key={i}
+          />
         ))}
         <AddServer onClick={handleOpen}>
           <FontAwesomeIcon icon={faPlus} className="group__icon" />

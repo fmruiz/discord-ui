@@ -21,4 +21,13 @@ export const queries = {
       }
     }
   `,
+  channelImagesQuery: gql`
+    {
+      channelImages {
+        img {
+          url
+        }
+      }
+    }
+  `,
 };
