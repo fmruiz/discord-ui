@@ -11,8 +11,7 @@ export function getMusicPublicationsAction() {
     dispatch(getMusicPublications());
     try {
       const res = await graphCms.request(queries.musicPublicationsQuery);
-      console.log(res);
-      dispatch(getMusicPublicationsSuccess());
+      dispatch(getMusicPublicationsSuccess(res.musicPublications));
     } catch (error) {
       console.log(error);
       dispatch(getMusicPublicationsFailed());
@@ -25,9 +24,9 @@ const getMusicPublications = () => ({
   payload: true,
 });
 
-const getMusicPublicationsSuccess = () => ({
+const getMusicPublicationsSuccess = (publications) => ({
   type: GET_MUSICPUBLICATIONS_SUCCESS,
-  payload: "",
+  payload: publications,
 });
 
 const getMusicPublicationsFailed = () => ({
