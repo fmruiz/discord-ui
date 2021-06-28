@@ -1,57 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   ProfilesImg,
   ProfilesName,
   UserVoiceConnectedContainer,
   UserVoiceConnectedProfiles,
 } from "./styles";
-import Elon from "../../../../../assets/elon.jpg";
-import Bezos from "../../../../../assets/bezos.jpg";
-import Mark from "../../../../../assets/mark.jpg";
 import { LiveTag } from "../../../../LiveTag/LiveTag";
 import { Link } from "react-router-dom";
+// REDUX
+import { useDispatch, useSelector } from "react-redux";
+import { getVoiceUsersAction } from "../../../../../redux/actions/voiceUsersActions";
 
 export const UserVoiceConnected = () => {
-  const profilesData = [
-    {
-      name: "ElonX",
-      logo: Elon,
-      inStreaming: true,
-      path: "/elon",
-    },
-    {
-      name: "Mr.Jeff",
-      logo: Bezos,
-      inStreaming: false,
-      path: "/welcome",
-    },
-    {
-      name: "markZ",
-      logo: Mark,
-      inStreaming: false,
-      path: "/welcome",
-    },
-  ];
+  // effect
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getVoiceUsersAction());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  // global state voice users
+  const { voiceUsers } = useSelector((state) => state.voiceUsers);
 
   return (
     <>
-      {/* <Link to="/elon">
-        <UserVoiceConnectedContainer>
-          <UserVoiceConnectedProfiles>
-            <ProfilesImg src={Elon} alt="profile-img" />
-            <ProfilesName>ElonX</ProfilesName>
-          </UserVoiceConnectedProfiles>
-          <LiveTag />
-        </UserVoiceConnectedContainer>
-      </Link> */}
-      {profilesData.map((p, i) => (
-        <Link to={p.path}>
+      {voiceUsers.map((v, i) => (
+        <Link to={v.path}>
           <UserVoiceConnectedContainer key={i}>
             <UserVoiceConnectedProfiles>
-              <ProfilesImg src={p.logo} alt="profile-img" />
-              <ProfilesName>{p.name}</ProfilesName>
+              <ProfilesImg src={v.logo.url} alt="profile-img" />
+              <ProfilesName>{v.name}</ProfilesName>
             </UserVoiceConnectedProfiles>
-            {p.inStreaming && <LiveTag />}
+            {v.isStreaming && <LiveTag />}
           </UserVoiceConnectedContainer>
         </Link>
       ))}

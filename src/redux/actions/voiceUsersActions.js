@@ -11,7 +11,7 @@ export function getVoiceUsersAction() {
     dispatch(getVoiceUsers());
     try {
       const res = await graphCms.request(queries.voiceUsersQuery);
-      dispatch(getVoiceUsersSuccess());
+      dispatch(getVoiceUsersSuccess(res.voiceUsers));
     } catch (error) {
       console.log(error);
       dispatch(getVoiceUsersFailed());
@@ -24,9 +24,9 @@ const getVoiceUsers = () => ({
   payload: true,
 });
 
-const getVoiceUsersSuccess = () => ({
+const getVoiceUsersSuccess = (voiceUsers) => ({
   type: GET_VOICEUSERS_SUCCESS,
-  payload: "",
+  payload: voiceUsers,
 });
 
 const getVoiceUsersFailed = () => ({
