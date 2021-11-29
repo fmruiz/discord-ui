@@ -1,49 +1,27 @@
 import React from "react";
-import { Redirect, Route, Switch } from "react-router-dom";
-import { Header } from "./Header/Header";
+import { Routes, Route } from "react-router-dom";
 import { SidebarChannel } from "./SidebarChannel/SidebarChannel";
-import { ChatMain } from "./ChatMain/ChatMain";
 import { DashboardContainer, MainContainer } from "./styles";
-import { StreamingScreen } from "./StreamingScreen/StreamingScreen";
+import Welcome from "../Welcome";
+import GeneralChat from "../GeneralChat";
+import MusicRequests from "../MusicRequests";
+import Memes from "../Memes";
+import Elon from "../Elon";
 
 export const Main = () => {
   return (
-    <Switch>
-      <MainContainer>
-        <Route
-          path={[
-            "/welcome",
-            "/general-chat",
-            "/music-requests",
-            "/memes",
-            "/elon",
-          ]}
-        >
-          <SidebarChannel />
-        </Route>
-        <DashboardContainer>
-          <Redirect from="/" to="/welcome" />
-          <Route path="/welcome">
-            <Header title="welcome" />
-            <ChatMain isWelcome />
-          </Route>
-          <Route path="/general-chat">
-            <Header title="general-chat" />
-            <ChatMain />
-          </Route>
-          <Route path="/music-requests">
-            <Header title="music-requests" />
-            <ChatMain isMusic />
-          </Route>
-          <Route path="/memes">
-            <Header title="memes" />
-            <ChatMain />
-          </Route>
-          <Route path="/elon">
-            <StreamingScreen />
-          </Route>
-        </DashboardContainer>
-      </MainContainer>
-    </Switch>
+    <MainContainer>
+      <SidebarChannel />
+      <DashboardContainer>
+        {/* <Redirect from="/" to="/welcome" /> */}
+        <Routes>
+          <Route path="/welcome" element={<Welcome />} />
+          <Route path="/general-chat" element={<GeneralChat />} />
+          <Route path="/music-requests" element={<MusicRequests />} />
+          <Route path="/memes" element={<Memes />} />
+          <Route path="/elon" element={<Elon />} />
+        </Routes>
+      </DashboardContainer>
+    </MainContainer>
   );
 };
