@@ -1,8 +1,24 @@
-import Elon from "./components/Elon";
-import GeneralChat from "./components/GeneralChat";
-import Memes from "./components/Memes";
-import MusicRequests from "./components/MusicRequests";
+import { lazy } from "react";
 import Welcome from "./components/Welcome";
+
+// lazy components
+const LazyGeneralChat = lazy(() =>
+  import(/* webpackChunkName: "LazyGeneralChat" */ "./components/GeneralChat")
+);
+
+const LazyMusicRequests = lazy(() =>
+  import(
+    /* webpackChunkName: "LazyMusicRequests" */ "./components/MusicRequests"
+  )
+);
+
+const LazyMemes = lazy(() =>
+  import(/* webpackChunkName: "LazyMemes" */ "./components/Memes")
+);
+
+const LazyElon = lazy(() =>
+  import(/* webpackChunkName: "LazyElon" */ "./components/Elon")
+);
 
 export const routes = [
   {
@@ -11,18 +27,18 @@ export const routes = [
   },
   {
     path: "/general-chat",
-    Component: GeneralChat,
+    Component: LazyGeneralChat,
   },
   {
     path: "/music-requests",
-    Component: MusicRequests,
+    Component: LazyMusicRequests,
   },
   {
     path: "/memes",
-    Component: Memes,
+    Component: LazyMemes,
   },
   {
     path: "/elon",
-    Component: Elon,
+    Component: LazyElon,
   },
 ];
