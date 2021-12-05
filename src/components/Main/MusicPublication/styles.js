@@ -1,51 +1,13 @@
 import styled from "styled-components";
 
-export const MusicPublicationContainer = styled.div`
-  display: flex;
-  padding-top: 5px;
-  padding-left: 15px;
-  padding-bottom: 10px;
-  margin-right: 4px;
-  margin-top: 7px;
-  margin-bottom: 7px;
-
-  :hover {
-    background-color: ${(props) => props.theme.COLORS.musicGray};
-  }
-`;
-
 export const UserPublication = styled.div`
   display: flex;
-`;
-
-export const MusicUserImg = styled.img`
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
 `;
 
 export const UserInformationContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 20px;
-`;
-
-export const UserNameText = styled.p`
-  margin-top: 0;
-  margin-bottom: 3px;
-  color: ${(props) => props.theme.COLORS.white};
-
-  :hover {
-    text-decoration: underline;
-  }
-`;
-
-export const VideoLink = styled.a`
-  color: #2196f3;
-
-  :hover {
-    text-decoration: underline;
-  }
 `;
 
 export const VideoContainer = styled.div`

@@ -5,7 +5,7 @@ import { Header } from "../Main/Header";
 const Memes = () => (
   <Fragment>
     <Header title="memes" />
-    <ChatMain />
+    <ChatMain isMemes/>
   </Fragment>
 );
 

@@ -1,16 +1,18 @@
 import React, { useEffect } from "react";
 import {
-  MusicPublicationContainer,
-  MusicUserImg,
   PlatformTitle,
   SongArtist,
   SongName,
   UserInformationContainer,
-  UserNameText,
   UserPublication,
   VideoContainer,
-  VideoLink,
 } from "./styles";
+import {
+  PublicationContainer,
+  UserImg,
+  UsernameText,
+  VideoLink,
+} from "../../common";
 import { useDispatch, useSelector } from "react-redux";
 import { getMusicPublicationsAction } from "../../../redux/actions/musicPublicationsActions";
 
@@ -28,11 +30,11 @@ export const MusicPublication = () => {
   return (
     <>
       {musicPublications.map((m, i) => (
-        <MusicPublicationContainer key={i}>
+        <PublicationContainer key={i}>
           <UserPublication>
-            <MusicUserImg src={m.img.url} />
+            <UserImg src={m.img.url} />
             <UserInformationContainer>
-              <UserNameText>{m.username}</UserNameText>
+              <UsernameText>{m.username}</UsernameText>
               <VideoLink>{m.link}</VideoLink>
               <VideoContainer>
                 <PlatformTitle>YouTube</PlatformTitle>
@@ -50,7 +52,7 @@ export const MusicPublication = () => {
               </VideoContainer>
             </UserInformationContainer>
           </UserPublication>
-        </MusicPublicationContainer>
+        </PublicationContainer>
       ))}
     </>
   );
