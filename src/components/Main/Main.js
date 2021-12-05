@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { SidebarChannel } from "./SidebarChannel/SidebarChannel";
+import { SidebarChannel } from "./SidebarChannel";
 import { DashboardContainer, MainContainer } from "./styles";
 import { routes } from "../../routes";
 

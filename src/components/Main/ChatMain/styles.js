@@ -9,7 +9,8 @@ export const ChannelChatContainer = styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${(props) => props.theme.COLORS.mediumGray};
-  width: 85%;
+  width: 100%;
+  height: 90%;
   margin-right: 4px;
   overflow-y: scroll;
 
@@ -30,3 +31,9 @@ export const ChannelChatContainer = styled.div`
     border-radius: 20px;
   }
 `;
+
+export const MainRequestsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+`
