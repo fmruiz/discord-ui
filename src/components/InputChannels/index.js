@@ -13,25 +13,27 @@ const InputChannels = () => {
   // get actual route
   let { pathname } = location;
   // meme name
-  let memeName = ''
+  let memeName = "";
   // change input fn
   const handleChange = (e) => {
     if (pathname === "/memes") {
-      return memeName = e
+      return (memeName = e);
     }
   };
-  // on submit 
+  // on submit
   const handleSubmit = (e) => {
-    e.preventDefault()
-    let meme = memeName
-    dispatch(getMemes(meme));
-  }
+    e.preventDefault();
+    if (pathname === "/memes") {
+      let meme = memeName;
+      dispatch(getMemes(meme));
+    }
+  };
 
   return (
     <Container>
       <form onSubmit={(e) => handleSubmit(e)}>
         <Input
-          placeholder="Message"
+          placeholder={`Message ${pathname.replace("/", "#")}`}
           onChange={(e) => handleChange(e.target.value)}
         />
       </form>
