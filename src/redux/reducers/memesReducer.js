@@ -32,7 +32,7 @@ export default function MemesReducer(state = initialState, action) {
       return {
         ...state,
         loading: false,
-        memes: action.payload,
+        memes: [...state.memes, action.payload],
       };
     case GET_INITIAL_MEMES_ERROR:
     case GET_MEMES_ERROR:

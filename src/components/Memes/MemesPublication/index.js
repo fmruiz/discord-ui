@@ -21,10 +21,23 @@ const MemesPublication = () => {
   // from redux states
   const { adminInfo } = useSelector((state) => state.adminInfo);
   const { initialMeme } = useSelector((state) => state.memes);
+  const { memes } = useSelector((state) => state.memes)
 
   return (
     <Container>
       {initialMeme.map((meme, i) => (
+        <PublicationContainer key={i}>
+          <UserPublication>
+            <UserImg src={adminInfo.logo.url} />
+            <UserInformationContainer>
+              <UsernameText>{adminInfo.name}</UsernameText>
+              <TitleImage>{`"${meme.title}"`}</TitleImage>
+              <MemeImage src={meme.images.downsized.url} alt={meme.title} />
+            </UserInformationContainer>
+          </UserPublication>
+        </PublicationContainer>
+      ))}
+      {memes.map((meme, i) => (
         <PublicationContainer key={i}>
           <UserPublication>
             <UserImg src={adminInfo.logo.url} />
