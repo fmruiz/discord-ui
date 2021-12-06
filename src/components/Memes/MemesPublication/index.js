@@ -11,8 +11,9 @@ import {
 } from "./styles";
 
 const MemesPublication = () => {
+  // use dispatch
   const dispatch = useDispatch();
-
+  // effects
   useEffect(() => {
     dispatch(getInitialMemes());
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -20,8 +21,6 @@ const MemesPublication = () => {
   // from redux states
   const { adminInfo } = useSelector((state) => state.adminInfo);
   const { initialMeme } = useSelector((state) => state.memes);
-
-  console.log(initialMeme);
 
   return (
     <Container>

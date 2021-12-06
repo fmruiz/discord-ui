@@ -6,10 +6,14 @@ export const Container = styled.div`
   justify-content: center;
   height: 10%;
   background-color: ${(p) => p.theme.COLORS.mediumgray};
+
+  form {
+    width: 95%;
+  }
 `;
 
 export const Input = styled.input`
-  width: 95%;
+  width: 100%;
   height: 35px;
   border-radius: 8px;
   border: none;
